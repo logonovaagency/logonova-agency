@@ -1,6 +1,8 @@
 "use server";
 
 import { z } from "zod";
+import { getDictionary } from "@/lib/dictionaries";
+import { i18n, type Locale } from "../../../i18n-config";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -10,6 +12,8 @@ const contactSchema = z.object({
 });
 
 export async function submitContactForm(prevState: any, formData: FormData) {
+  const lang = (formData.get("lang") as Locale) || i18n.defaultLocale;
+
   const validatedFields = contactSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
@@ -28,10 +32,12 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   // Simulate sending an email or saving to a database
   console.log("Form data submitted:", validatedFields.data);
   await new Promise(resolve => setTimeout(resolve, 1000));
+  
+  const dictionary = await getDictionary(lang);
 
   return {
     success: true,
-    message: "Thank you for your message! We will get back to you shortly.",
+    message: dictionary.contactPage.form.success,
     errors: null,
   };
 }

@@ -1,33 +1,18 @@
 import { Code2, Palette, Megaphone } from 'lucide-react';
 import type { Service, Project } from '@/lib/types';
 
-export const services: Service[] = [
+export const services: Omit<Service, 'icon'>[] & {icon: any}[] = [
   {
     id: 'web-dev',
-    title: 'Web Development',
     icon: Code2,
-    description: 'Cutting-edge web solutions tailored to your business needs.',
-    longDescription:
-      'We build responsive, high-performance websites and web applications using the latest technologies. Our process focuses on scalability, security, and providing a seamless user experience. From e-commerce platforms to custom enterprise software, we deliver digital products that drive growth.',
-    price: 'Starts at $5,000',
   },
   {
     id: 'branding',
-    title: 'Branding & Design',
     icon: Palette,
-    description: 'Creating memorable brands that stand out from the crowd.',
-    longDescription:
-      'Our branding and design services help you craft a unique identity that resonates with your target audience. We cover everything from logo design and brand guidelines to UI/UX design for digital products. We believe great design is about creating a lasting connection with your customers.',
-    price: 'Starts at $3,500',
   },
   {
     id: 'marketing',
-    title: 'Digital Marketing',
     icon: Megaphone,
-    description: 'Data-driven marketing strategies to grow your audience.',
-    longDescription:
-      'We help you reach and engage your target audience through comprehensive digital marketing strategies. Our services include SEO, content marketing, social media management, and paid advertising campaigns. We focus on measurable results and a positive return on investment.',
-    price: 'Starts at $2,500/mo',
   },
 ];
 
@@ -35,69 +20,29 @@ export const projects: Project[] = [
   {
     id: 'p1',
     slug: 'project-alpha',
-    title: 'Project Alpha',
-    category: 'Web Development',
-    description: 'A comprehensive web platform for a leading tech startup.',
-    longDescription: 'Project Alpha was a ground-up development of a scalable, multi-tenant SaaS platform. We focused on a microservices architecture to ensure high availability and independent scalability of services. The user interface was built with a modern JavaScript framework to provide a fast, responsive experience. Key challenges included real-time data synchronization and third-party API integrations, which were solved using a combination of WebSockets and a dedicated message queue system.',
     imageId: 'project-1-thumb',
     featured: true,
-    details: [
-      { title: 'Client', value: 'Innovate Inc.' },
-      { title: 'Timeline', value: '6 Months' },
-      { title: 'Platform', value: 'Web Application' },
-      { title: 'Increase in User Engagement', value: '+150%' },
-    ],
     galleryImageIds: ['project-1-gallery-1', 'project-1-gallery-2'],
   },
   {
     id: 'p2',
     slug: 'project-beta',
-    title: 'Project Beta',
-    category: 'Branding',
-    description: 'Complete rebranding for a major e-commerce company.',
-    longDescription: 'Project Beta involved a complete overhaul of an established e-commerce brand to appeal to a younger demographic. Our team conducted extensive market research to inform the new brand strategy. We developed a new logo, color palette, typography system, and a comprehensive set of brand guidelines. The new visual identity was rolled out across their website, social media channels, and packaging, resulting in a significant boost in brand perception and market share.',
     imageId: 'project-2-thumb',
     featured: true,
-    details: [
-      { title: 'Client', value: 'ShopSphere' },
-      { title: 'Timeline', value: '3 Months' },
-      { title: 'Service', value: 'Branding & Identity' },
-      { title: 'Increase in Social Mentions', value: '+300%' },
-    ],
     galleryImageIds: ['project-2-gallery-1', 'project-2-gallery-2'],
   },
   {
     id: 'p3',
     slug: 'project-gamma',
-    title: 'Project Gamma',
-    category: 'Marketing',
-    description: 'A targeted digital marketing campaign to boost sales.',
-    longDescription: 'For Project Gamma, we designed and executed a multi-channel digital marketing campaign aimed at increasing online sales for a consumer goods client. The strategy included targeted SEO improvements, a content marketing push with blog posts and videos, and a social media advertising campaign on major platforms. We utilized A/B testing extensively to optimize ad copy and creative, leading to a highly efficient campaign that exceeded the client\'s sales goals.',
     imageId: 'project-3-thumb',
     featured: false,
-    details: [
-      { title: 'Client', value: 'Gadget Corp.' },
-      { title: 'Timeline', value: '4 Months' },
-      { title: 'Service', value: 'Digital Marketing' },
-      { title: 'Return on Ad Spend (ROAS)', value: '5.2x' },
-    ],
     galleryImageIds: ['project-3-gallery-1', 'project-3-gallery-2'],
   },
   {
     id: 'p4',
     slug: 'project-delta',
-    title: 'Project Delta',
-    category: 'Web Development',
-    description: 'UI/UX overhaul and front-end development for a mobile app.',
-    longDescription: 'Project Delta focused on improving the user experience of an existing mobile application. We started with user research and usability testing to identify pain points in the current design. Based on our findings, we created a new set of wireframes and high-fidelity mockups, which were then developed into a new front-end using a cross-platform framework. The result was a more intuitive, user-friendly application that saw a marked increase in user retention.',
     imageId: 'project-4-thumb',
     featured: true,
-    details: [
-      { title: 'Client', value: 'ConnectApp' },
-      { title: 'Timeline', value: '5 Months' },
-      { title: 'Platform', value: 'Mobile Application' },
-      { title: 'Decrease in User Churn', value: '-40%' },
-    ],
     galleryImageIds: ['project-4-gallery-1', 'project-4-gallery-2'],
   },
 ];

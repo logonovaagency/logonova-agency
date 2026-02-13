@@ -5,13 +5,17 @@ import type { Project } from "@/lib/types";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Dictionary, getDictionary } from "@/lib/dictionaries";
+import { Locale } from "../../../i18n-config";
 
 type PortfolioClientProps = {
-  projects: Project[];
+  projects: (Project & { title: string; category: string; description: string; })[];
   categories: string[];
+  lang: Locale;
+  dictionary: Dictionary;
 };
 
-export function PortfolioClient({ projects, categories }: PortfolioClientProps) {
+export function PortfolioClient({ projects, categories, lang, dictionary }: PortfolioClientProps) {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
@@ -29,7 +33,7 @@ export function PortfolioClient({ projects, categories }: PortfolioClientProps) 
             "bg-primary/10 text-primary": activeCategory === "All",
           })}
         >
-          All
+          {dictionary.projects.all}
         </Button>
         {categories.map((category) => (
           <Button
@@ -46,7 +50,7 @@ export function PortfolioClient({ projects, categories }: PortfolioClientProps) 
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} lang={lang} dictionary={dictionary} />
         ))}
       </div>
     </section>

@@ -1,29 +1,40 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { projects } from "@/lib/data";
+import { projects as projectsData } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { getDictionary } from "@/lib/dictionaries";
+import { i18n, type Locale } from "../../../../../i18n-config";
 
 type ProjectPageProps = {
   params: {
     slug: string;
+    lang: Locale;
   };
 };
 
-export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+export async function generateStaticParams() {
+  return i18n.locales.flatMap((lang) =>
+    projectsData.map((project) => ({
+      lang: lang,
+      slug: project.slug,
+    }))
+  );
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const dictionary = await getDictionary(params.lang);
+  const projectData = projectsData.find((p) => p.slug === params.slug);
+  const projectText = dictionary.projects.items.find((p) => p.id === projectData?.id);
 
-  if (!project) {
+
+  if (!projectData || !projectText) {
     notFound();
   }
+
+  const project = {...projectData, ...projectText};
 
   const mainImage = PlaceHolderImages.find(p => p.id === project.imageId);
   const galleryImages = project.galleryImageIds.map(id => PlaceHolderImages.find(p => p.id === id)).filter(Boolean);
@@ -51,7 +62,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2">
-              <h2 className="text-3xl font-headline font-bold mb-4">Case Study</h2>
+              <h2 className="text-3xl font-headline font-bold mb-4">{dictionary.projectPage.caseStudy}</h2>
               <div className="prose prose-invert max-w-none text-muted-foreground">
                 <p>{project.longDescription}</p>
               </div>
@@ -59,7 +70,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <div>
               <Card>
                 <CardHeader>
-                  <CardTitle className="font-headline">Project Details</CardTitle>
+                  <CardTitle className="font-headline">{dictionary.projectPage.projectDetails}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {project.details.map((detail, index) => (
@@ -76,7 +87,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <Separator className="my-16" />
 
           <div>
-             <h2 className="text-3xl font-headline font-bold mb-8 text-center">Project Gallery</h2>
+             <h2 className="text-3xl font-headline font-bold mb-8 text-center">{dictionary.projectPage.projectGallery}</h2>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {galleryImages.map((image, index) => image && (
                     <div key={index} className="relative aspect-video w-full rounded-lg overflow-hidden border shadow-md">

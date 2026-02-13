@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "getQuote": "Obtenir un devis"
+  },
+  "hero": {
+    "title": "Transformez votre vision en réalité numérique",
+    "subtitle": "Nous créons des expériences numériques magnifiques, efficaces et pérennes qui aident votre entreprise à prospérer.",
+    "buttonWork": "Voir nos réalisations",
+    "buttonServices": "Nos Services"
+  },
+  "services": {
+    "title": "Ce que nous faisons",
+    "subtitle": "Nous offrons une gamme complète de services pour assurer le succès de votre entreprise en ligne.",
+    "learnMore": "En savoir plus",
+    "requestQuote": "Demander un devis",
+    "items": [
+      {
+        "id": "web-dev",
+        "title": "Développement Web",
+        "description": "Solutions web de pointe adaptées aux besoins de votre entreprise.",
+        "longDescription": "Nous construisons des sites et applications web réactifs et performants en utilisant les dernières technologies. Notre processus se concentre sur la scalabilité, la sécurité et une expérience utilisateur transparente. Des plateformes e-commerce aux logiciels d'entreprise sur mesure, nous livrons des produits numériques qui stimulent la croissance.",
+        "price": "À partir de 5 000 $"
+      },
+      {
+        "id": "branding",
+        "title": "Image de marque & Design",
+        "description": "Créer des marques mémorables qui se démarquent de la concurrence.",
+        "longDescription": "Nos services de branding et de design vous aident à créer une identité unique qui résonne avec votre public cible. Nous couvrons tout, de la conception de logo et des chartes graphiques à la conception UI/UX pour les produits numériques. Nous croyons qu'un excellent design crée une connexion durable avec vos clients.",
+        "price": "À partir de 3 500 $"
+      },
+      {
+        "id": "marketing",
+        "title": "Marketing Numérique",
+        "description": "Stratégies marketing basées sur les données pour développer votre audience.",
+        "longDescription": "Nous vous aidons à atteindre et à engager votre public cible grâce à des stratégies de marketing numérique complètes. Nos services incluent le SEO, le marketing de contenu, la gestion des médias sociaux et les campagnes publicitaires payantes. Nous nous concentrons sur des résultats mesurables et un retour sur investissement positif.",
+        "price": "À partir de 2 500 $/mois"
+      }
+    ]
+  },
+  "featuredWork": {
+    "title": "Nos réalisations",
+    "subtitle": "Un aperçu de certains de nos projets préférés.",
+    "exploreAll": "Explorer tous les projets"
+  },
+  "projects": {
+    "viewCaseStudy": "Voir l'étude de cas",
+    "all": "Tous",
+    "items": [
+      {
+        "id": "p1",
+        "title": "Projet Alpha",
+        "category": "Développement Web",
+        "description": "Une plateforme web complète pour une startup technologique de premier plan.",
+        "longDescription": "Le projet Alpha consistait en un développement de A à Z d'une plateforme SaaS multi-tenant et évolutive. Nous nous sommes concentrés sur une architecture de microservices pour garantir une haute disponibilité et une scalabilité indépendante des services. L'interface utilisateur a été conçue avec un framework JavaScript moderne pour offrir une expérience rapide et réactive. Les principaux défis comprenaient la synchronisation des données en temps réel et les intégrations d'API tierces, qui ont été résolus en utilisant une combinaison de WebSockets et d'une file d'attente de messages dédiée.",
+        "details": [
+          { "title": "Client", "value": "Innovate Inc." },
+          { "title": "Durée", "value": "6 mois" },
+          { "title": "Plateforme", "value": "Application Web" },
+          { "title": "Augmentation de l'engagement utilisateur", "value": "+150%" }
+        ]
+      },
+      {
+        "id": "p2",
+        "title": "Projet Beta",
+        "category": "Branding",
+        "description": "Refonte complète de la marque pour une grande entreprise de e-commerce.",
+        "longDescription": "Le projet Beta impliquait une refonte complète d'une marque de e-commerce établie pour attirer une clientèle plus jeune. Notre équipe a mené des études de marché approfondies pour informer la nouvelle stratégie de marque. Nous avons développé un nouveau logo, une nouvelle palette de couleurs, un nouveau système typographique et un ensemble complet de directives de marque. La nouvelle identité visuelle a été déployée sur leur site web, leurs réseaux sociaux et leurs emballages, entraînant une augmentation significative de la perception de la marque et de sa part de marché.",
+        "details": [
+          { "title": "Client", "value": "ShopSphere" },
+          { "title": "Durée", "value": "3 mois" },
+          { "title": "Service", "value": "Branding & Identité" },
+          { "title": "Augmentation des mentions sociales", "value": "+300%" }
+        ]
+      },
+      {
+        "id": "p3",
+        "title": "Projet Gamma",
+        "category": "Marketing",
+        "description": "Une campagne de marketing numérique ciblée pour stimuler les ventes.",
+        "longDescription": "Pour le projet Gamma, nous avons conçu et exécuté une campagne de marketing numérique multicanal visant à augmenter les ventes en ligne d'un client du secteur des biens de consommation. La stratégie comprenait des améliorations ciblées du référencement, une campagne de marketing de contenu avec des articles de blog et des vidéos, ainsi qu'une campagne publicitaire sur les principales plateformes de médias sociaux. Nous avons largement utilisé les tests A/B pour optimiser les textes publicitaires et les créations, ce qui a abouti à une campagne très efficace qui a dépassé les objectifs de vente du client.",
+        "details": [
+          { "title": "Client", "value": "Gadget Corp." },
+          { "title": "Durée", "value": "4 mois" },
+          { "title": "Service", "value": "Marketing Numérique" },
+          { "title": "Retour sur les dépenses publicitaires (ROAS)", "value": "5.2x" }
+        ]
+      },
+      {
+        "id": "p4",
+        "title": "Projet Delta",
+        "category": "Développement Web",
+        "description": "Refonte UI/UX et développement front-end pour une application mobile.",
+        "longDescription": "Le projet Delta visait à améliorer l'expérience utilisateur d'une application mobile existante. Nous avons commencé par une recherche utilisateur et des tests d'utilisabilité pour identifier les points de friction dans la conception actuelle. Sur la base de nos découvertes, nous avons créé une nouvelle série de wireframes et de maquettes haute fidélité, qui ont ensuite été développées en une nouvelle interface front-end à l'aide d'un framework multiplateforme. Le résultat a été une application plus intuitive et conviviale qui a vu une augmentation marquée de la rétention des utilisateurs.",
+        "details": [
+          { "title": "Client", "value": "ConnectApp" },
+          { "title": "Durée", "value": "5 mois" },
+          { "title": "Plateforme", "value": "Application mobile" },
+          { "title": "Diminution du taux de désabonnement", "value": "-40%" }
+        ]
+      }
+    ]
+  },
+  "portfolioPage": {
+    "title": "Nos réalisations",
+    "subtitle": "Nous sommes fiers de notre travail. Explorez une sélection de nos projets qui mettent en valeur notre engagement envers la qualité et l'innovation."
+  },
+  "projectPage": {
+    "caseStudy": "Étude de cas",
+    "projectDetails": "Détails du projet",
+    "projectGallery": "Galerie du projet"
+  },
+  "servicesPage": {
+    "title": "Nos Services",
+    "subtitle": "Du concept au lancement, nous fournissons l'expertise nécessaire pour donner vie à votre vision numérique."
+  },
+  "contactPage": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez un projet en tête ? Nous serions ravis d'en discuter. Remplissez le formulaire ou utilisez nos coordonnées ci-dessous.",
+    "form": {
+        "name": "Nom",
+        "namePlaceholder": "Votre nom",
+        "email": "Email",
+        "emailPlaceholder": "votre.email@exemple.com",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Concernant vos services",
+        "message": "Message",
+        "messagePlaceholder": "Parlez-nous un peu de votre projet",
+        "submit": "Envoyer le message",
+        "success": "Merci pour votre message ! Nous vous recontacterons sous peu."
+    }
+  },
+  "footer": {
+    "slogan": "Construire l'avenir du web, un projet à la fois. Nous sommes une agence numérique spécialisée dans les solutions web modernes.",
+    "siteMap": "Plan du site",
+    "connect": "Réseaux",
+    "copyright": "© {year} Logonova Agency. Tous droits réservés. Fondé par APEDO Elias Josue Kossi."
+  }
+}

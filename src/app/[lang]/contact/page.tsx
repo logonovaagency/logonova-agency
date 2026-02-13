@@ -1,15 +1,19 @@
 import { ContactForm } from "./ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { getDictionary } from "@/lib/dictionaries";
+import type { Locale } from "../../../i18n-config";
 
-export default function ContactPage() {
+export default async function ContactPage({ params: { lang } }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(lang);
+  const { contactPage } = dictionary;
   return (
     <div className="bg-background">
       <section className="container mx-auto py-20 md:py-28">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col justify-center">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Get in Touch</h1>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">{contactPage.title}</h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Have a project in mind? We'd love to hear about it. Fill out the form or use our contact details below.
+              {contactPage.subtitle}
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -28,7 +32,7 @@ export default function ContactPage() {
           </div>
           <div>
             <div className="bg-card p-8 rounded-lg border">
-              <ContactForm />
+              <ContactForm dictionary={dictionary.contactPage.form} lang={lang} />
             </div>
           </div>
         </div>

@@ -20,6 +20,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import type { Dictionary } from "@/lib/dictionaries";
+import { Locale } from "../../../i18n-config";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -36,17 +38,17 @@ const initialState = {
   errors: null,
 };
 
-function SubmitButton() {
+function SubmitButton({ dictionary }: { dictionary: Dictionary['contactPage']['form']}) {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-      Send Message
+      {dictionary.submit}
     </Button>
   );
 }
 
-export function ContactForm() {
+export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['contactPage']['form'], lang: Locale }) {
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
 
@@ -83,14 +85,15 @@ export function ContactForm() {
   return (
     <Form {...form}>
       <form action={formAction} className="space-y-6">
+        <input type="hidden" name="lang" value={lang} />
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>{dictionary.name}</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder={dictionary.namePlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -101,9 +104,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>{dictionary.email}</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder={dictionary.emailPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -114,9 +117,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>{dictionary.subject}</FormLabel>
               <FormControl>
-                <Input placeholder="Regarding your services" {...field} />
+                <Input placeholder={dictionary.subjectPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,10 +130,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{dictionary.message}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell us a little bit about your project"
+                  placeholder={dictionary.messagePlaceholder}
                   className="min-h-[150px]"
                   {...field}
                 />
@@ -139,7 +142,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <SubmitButton />
+        <SubmitButton dictionary={dictionary} />
       </form>
     </Form>
   );

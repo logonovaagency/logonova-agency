@@ -13,16 +13,25 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import type { Dictionary } from "@/lib/dictionaries";
+import { i18n, type Locale } from "../../../i18n-config";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/contact", label: "Contact" },
-];
-
-export function Header() {
+export function Header({ lang, dictionary }: { lang: Locale, dictionary: Dictionary }) {
   const pathname = usePathname();
+
+  const redirectedPathName = (locale: Locale) => {
+    if (!pathname) return '/';
+    const segments = pathname.split('/');
+    segments[1] = locale;
+    return segments.join('/');
+  };
+
+  const navLinks = [
+    { href: `/${lang}`, label: dictionary.nav.home },
+    { href: `/${lang}/services`, label: dictionary.nav.services },
+    { href: `/${lang}/portfolio`, label: dictionary.nav.portfolio },
+    { href: `/${lang}/contact`, label: dictionary.nav.contact },
+  ];
 
   const renderNavLinks = (isMobile = false) =>
     navLinks.map((link) => (
@@ -45,16 +54,33 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
           <Rocket className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline text-lg">Logonova</span>
         </Link>
         <nav className="hidden flex-1 items-center space-x-4 md:flex">
           {renderNavLinks()}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+           <div className="flex items-center border rounded-md p-1">
+            {i18n.locales.map((locale) => (
+              <Button
+                key={locale}
+                asChild
+                variant={lang === locale ? "secondary" : "ghost"}
+                size="sm"
+                className="px-2"
+              >
+                <Link
+                  href={redirectedPathName(locale)}
+                >
+                  {locale.toUpperCase()}
+                </Link>
+              </Button>
+            ))}
+          </div>
           <Button asChild>
-            <Link href="/contact">Get a Quote</Link>
+            <Link href={`/${lang}/contact`}>{dictionary.nav.getQuote}</Link>
           </Button>
           <div className="md:hidden">
             <Sheet>
