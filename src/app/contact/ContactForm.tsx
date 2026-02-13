@@ -34,8 +34,8 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Invalid email address."),
   phone: z.string().min(8, "Phone number seems too short."),
-  projectType: z.string({ required_error: "Please select a project type." }),
-  budget: z.string({ required_error: "Please select a budget." }),
+  projectType: z.string({ required_error: "Please select a project type." }).min(1, "Please select a project type."),
+  budget: z.string({ required_error: "Please select a budget." }).min(1, "Please select a budget."),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
@@ -71,9 +71,6 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
       projectType: "",
       budget: "",
     },
-    errors: state?.errors ? 
-        Object.fromEntries(Object.entries(state.errors).map(([key, value]) => [key, { type: 'server', message: value?.[0] }]))
-        : {}
   });
 
   useEffect(() => {
@@ -83,14 +80,23 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
         description: state.message,
       });
       form.reset();
-    } else if (state.message && !state.success && !state.errors) {
+    } else if (state.errors) {
+      Object.entries(state.errors).forEach(([key, value]) => {
+        if (value) {
+          form.setError(key as keyof ContactFormValues, {
+            type: "server",
+            message: value[0],
+          });
+        }
+      });
+    } else if (state.message && !state.success) {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
         description: state.message,
       });
     }
-  }, [state, toast, form]);
+  }, [state, form, toast]);
 
   return (
     <Form {...form}>

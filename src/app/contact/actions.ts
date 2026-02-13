@@ -8,8 +8,8 @@ const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Invalid email address."),
   phone: z.string().min(8, "Phone number seems too short."),
-  projectType: z.string({ required_error: "Please select a project type." }),
-  budget: z.string({ required_error: "Please select a budget." }),
+  projectType: z.string({ required_error: "Please select a project type." }).min(1, "Please select a project type."),
+  budget: z.string({ required_error: "Please select a budget." }).min(1, "Please select a budget."),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
