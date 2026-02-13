@@ -21,100 +21,100 @@ export const projects: Project[] = [
     slug: "taskly-pme",
     title: "Taskly PME",
     category: "SaaS / Gestion",
-    tech: ["Next.js", "Node.js", "MongoDB"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Firebase Auth", "Node.js", "KkiaPay API"],
     description: {
-      fr: "Solution complète de gestion d'interventions et de planning pour les PME.",
-      en: "Complete intervention management and scheduling solution for SMEs."
+      fr: "Solution complète de gestion d'interventions avec paiements intégrés via KkiaPay.",
+      en: "Complete intervention management solution with integrated KkiaPay payments."
     },
     demoLink: "https://taskly-pme.netlify.app",
     year: "2025",
     challenge: {
-      fr: "Les PME perdent 20% de productivité à cause d'une mauvaise gestion des équipes terrain.",
-      en: "SMEs lose 20% productivity due to poor field team management."
+      fr: "Sécuriser les accès utilisateurs et gérer les paiements mobiles locaux.",
+      en: "Secure user access and manage local mobile payments."
     },
     solution: {
-      fr: "Une application web progressive (PWA) permettant le suivi en temps réel et la génération de rapports automatisés.",
-      en: "A progressive web app (PWA) allowing real-time tracking and automated report generation."
+      fr: "Architecture typée en TypeScript pour la robustesse, Auth via Firebase et checkout KkiaPay.",
+      en: "Typed architecture with TypeScript for robustness, Firebase Auth, and KkiaPay checkout."
     }
   },
   {
     slug: "wings-shake",
     title: "Wings Shake",
-    category: "Mobile App / Food",
-    tech: ["Flutter", "Firebase", "Stripe"],
+    category: "Food Tech / App",
+    tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
     description: {
-      fr: "Application de commande rapide pour fast-food avec programme de fidélité.",
-      en: "Fast-food quick ordering app with loyalty program."
+      fr: "Application de commande rapide optimisée pour mobile.",
+      en: "Fast ordering application optimized for mobile."
     },
     demoLink: "https://wingsshake.netlify.app",
     year: "2024",
     challenge: {
-      fr: "Réduire le temps d'attente en caisse aux heures de pointe.",
-      en: "Reduce checkout waiting time during peak hours."
+      fr: "Garantir une fluidité maximale sur tous les téléphones, même anciens.",
+      en: "Ensure maximum fluidity on all phones, even older ones."
     },
     solution: {
-      fr: "Une interface mobile 'One-Click Order' optimisée pour la vitesse.",
-      en: "A mobile 'One-Click Order' interface optimized for speed."
+      fr: "Utilisation de Vanilla JS et LocalStorage pour sauvegarder le panier sans base de données lourde.",
+      en: "Using Vanilla JS and LocalStorage to save the cart without heavy databases."
     }
   },
   {
     slug: "slate-peedz",
     title: "Slate Peed'z",
     category: "E-commerce",
-    tech: ["React", "Redux", "Payment API"],
+    tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
     description: {
-      fr: "Plateforme de commande de pizzas avec personnalisation d'ingrédients.",
-      en: "Pizza ordering platform with ingredient customization."
+      fr: "Plateforme de commande de pizzas avec gestion de panier local.",
+      en: "Pizza ordering platform with local cart management."
     },
     demoLink: "https://slate-peedz.netlify.app",
     year: "2025",
     challenge: {
-      fr: "Permettre aux clients de composer leur pizza sans erreur de commande.",
-      en: "Allow customers to build their pizza without order errors."
+      fr: "Permettre la persistance du panier même si l'utilisateur ferme la page.",
+      en: "Allow cart persistence even if the user closes the page."
     },
     solution: {
-      fr: "Un configurateur visuel interactif et un suivi de livraison temps réel.",
-      en: "An interactive visual configurator and real-time delivery tracking."
+      fr: "Logique JavaScript personnalisée pour gérer l'état du panier via le stockage local du navigateur.",
+      en: "Custom JavaScript logic to manage cart state via browser local storage."
     }
   },
   {
     slug: "cafe-paris-lome",
     title: "Café Paris Lomé",
     category: "Vitrine / Restaurant",
-    tech: ["HTML5", "SCSS", "JS Animation"],
+    tech: ["HTML5", "CSS3", "JavaScript"],
     description: {
-      fr: "Site vitrine élégant avec menu numérique QR code.",
-      en: "Elegant showcase site with QR code digital menu."
+      fr: "Site vitrine élégant pour un restaurant prestigieux.",
+      en: "Elegant showcase site for a prestigious restaurant."
     },
     demoLink: "https://cafeparis-lome.site",
     year: "2024",
     challenge: {
-      fr: "Refléter l'ambiance haut de gamme du lieu sur le web.",
-      en: "Reflect the venue's upscale ambiance on the web."
+      fr: "Présenter le menu de manière interactive et fluide.",
+      en: "Present the menu in an interactive and fluid way."
     },
     solution: {
-      fr: "Un design minimaliste avec des animations douces et une typographie soignée.",
-      en: "Minimalist design with smooth animations and refined typography."
+      fr: "Design responsive léger sans dépendances externes pour un chargement instantané.",
+      en: "Lightweight responsive design without external dependencies for instant loading."
     }
   },
   {
     slug: "chez-le-boss",
     title: "Chez Le Boss",
-    category: "Corporate / Vitrine",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
+    category: "Corporate",
+    tech: ["HTML5", "CSS3", "JavaScript"],
     description: {
-      fr: "Site professionnel pour une entreprise locale.",
-      en: "Professional website for a local business."
+      fr: "Site professionnel rapide et efficace.",
+      en: "Fast and efficient professional website."
     },
     demoLink: "https://chez-le-boss.vercel.app",
     year: "2025",
     challenge: {
-      fr: "Moderniser une image de marque vieillissante.",
-      en: "Modernize an aging brand image."
+      fr: "Une présence en ligne claire et accessible.",
+      en: "Clear and accessible online presence."
     },
     solution: {
-      fr: "Refonte complète de l'identité visuelle et site ultra-rapide.",
-      en: "Complete visual identity overhaul and ultra-fast website."
+      fr: "Structure sémantique optimisée pour le référencement (SEO) et la rapidité.",
+      en: "Semantic structure optimized for SEO and speed."
     }
   }
 ];
