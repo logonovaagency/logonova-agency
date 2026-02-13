@@ -68,6 +68,8 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
       email: "",
       phone: "",
       message: "",
+      projectType: "",
+      budget: "",
     },
     errors: state?.errors ? 
         Object.fromEntries(Object.entries(state.errors).map(([key, value]) => [key, { type: 'server', message: value?.[0] }]))
@@ -139,7 +141,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
           render={({ field }) => (
             <FormItem>
               <FormLabel>{dictionary.projectType}</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder={dictionary.projectTypePlaceholder} />
@@ -161,7 +163,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
           render={({ field }) => (
             <FormItem>
               <FormLabel>{dictionary.budget}</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger>
                     <SelectValue placeholder={dictionary.budgetPlaceholder} />
