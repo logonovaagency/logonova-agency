@@ -38,20 +38,21 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
 
   const renderNavLinks = (isMobile = false) =>
     navLinks.map((link) => (
-      <Button
+      <Link
         key={link.href}
-        asChild
-        variant="link"
+        href={link.href}
         className={cn(
-          "text-foreground/70 hover:text-foreground hover:no-underline transition-colors",
+          "transition-colors text-foreground/70 hover:text-foreground hover:no-underline font-medium flex items-center",
+          isMobile
+            ? "text-xl w-full justify-start py-3"
+            : "text-sm p-2 h-10",
           {
             "text-primary hover:text-primary font-semibold": pathname === link.href || (link.href.length > 3 && pathname.startsWith(link.href)),
-            "text-xl w-full justify-start py-6": isMobile,
           }
         )}
       >
-        <Link href={link.href}>{link.label}</Link>
-      </Button>
+        {link.label}
+      </Link>
     ));
 
   return (
