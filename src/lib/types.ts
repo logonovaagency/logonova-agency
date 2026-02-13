@@ -1,13 +1,24 @@
 import type { LucideIcon } from "lucide-react";
 
 export type Project = {
-  id: string;
   slug: string;
-  imageId: string;
-  featured: boolean;
-  galleryImageIds: string[];
+  title: string;
   category: string;
-  techs: string[];
+  tech: string[];
+  description: {
+    fr: string;
+    en: string;
+  };
+  demoLink: string;
+  year: string;
+  challenge: {
+    fr: string;
+    en: string;
+  };
+  solution: {
+    fr: string;
+    en: string;
+  };
 };
 
 export type Service = {

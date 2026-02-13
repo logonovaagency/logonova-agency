@@ -44,77 +44,9 @@
   "portfolio": {
     "title": "Nos Réalisations",
     "subtitle": "Un aperçu de certains de nos projets qui démontrent notre expertise.",
-    "exploreAll": "Explorer tous les projets"
-  },
-  "projects": {
+    "exploreAll": "Explorer tous les projets",
     "viewProject": "Voir le projet",
-    "all": "Tous",
-    "items": [
-      {
-        "id": "p1",
-        "title": "Taskly PME",
-        "description": "Outil complet de gestion d'interventions et de planning pour les PME.",
-        "longDescription": "Taskly PME est une solution SaaS conçue pour optimiser les opérations des petites et moyennes entreprises. Elle permet de planifier les interventions, de suivre les techniciens en temps réel et de générer des rapports détaillés.",
-        "details": [
-          {
-            "title": "Client",
-            "value": "Divers PME"
-          },
-          {
-            "title": "Service",
-            "value": "Développement SaaS"
-          }
-        ]
-      },
-      {
-        "id": "p2",
-        "title": "Slate Peed'z",
-        "description": "Plateforme de commande de pizzas avec suivi en temps réel.",
-        "longDescription": "Une expérience de commande en ligne fluide pour une pizzeria locale. Intégration d'un système de paiement sécurisé et d'une carte interactive pour le suivi de livraison.",
-        "details": [
-          {
-            "title": "Client",
-            "value": "Slate Peed'z"
-          },
-          {
-            "title": "Service",
-            "value": "E-commerce & API"
-          }
-        ]
-      },
-      {
-        "id": "p3",
-        "title": "Café Paris Lomé",
-        "description": "Site élégant et menu numérique pour un restaurant prestigieux.",
-        "longDescription": "Création d'un site vitrine mettant en valeur l'ambiance et la cuisine du restaurant. Développement d'un menu accessible via QR code, avec des mises à jour faciles pour le personnel.",
-        "details": [
-          {
-            "title": "Client",
-            "value": "Café Paris Lomé"
-          },
-          {
-            "title": "Service",
-            "value": "Site Vitrine & Menu QR"
-          }
-        ]
-      },
-      {
-        "id": "p4",
-        "title": "Wings Shake",
-        "description": "Application de commande rapide pour fast-food.",
-        "longDescription": "Application web légère et rapide pour la commande en 'click and collect'. Intégration avec Firebase pour une gestion en temps réel des commandes par le restaurant.",
-        "details": [
-          {
-            "title": "Client",
-            "value": "Wings Shake"
-          },
-          {
-            "title": "Service",
-            "value": "Web App"
-          }
-        ]
-      }
-    ]
+    "all": "Tous"
   },
   "testimonials": {
     "title": "Ce que disent nos clients",
@@ -137,9 +69,15 @@
     "subtitle": "Nous sommes fiers de notre travail. Explorez une sélection de nos projets qui mettent en valeur notre engagement envers la qualité et l'innovation."
   },
   "projectPage": {
-    "caseStudy": "Étude de cas",
-    "projectDetails": "Détails du projet",
-    "projectGallery": "Galerie du projet"
+    "visitSite": "Visiter le site en direct",
+    "theChallenge": "Le Défi",
+    "theSolution": "La Solution",
+    "backToProjects": "Retour aux projets",
+    "nextProject": "Projet Suivant",
+    "projectInfo": "Infos Projet",
+    "category": "Catégorie",
+    "year": "Année",
+    "technologies": "Technologies"
   },
   "servicesPage": {
     "title": "Nos Services",

@@ -11,8 +11,8 @@ type PortfolioSectionProps = {
 }
 
 export function PortfolioSection({ lang, dictionary }: PortfolioSectionProps) {
-    const { portfolio, projects: projectsDict } = dictionary;
-    const featuredProjects = projectsData.filter(p => p.featured);
+    const { portfolio } = dictionary;
+    const featuredProjects = projectsData.slice(0, 3);
 
     return (
         <section id="portfolio" className="py-20 md:py-32 bg-card">
@@ -24,14 +24,9 @@ export function PortfolioSection({ lang, dictionary }: PortfolioSectionProps) {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {featuredProjects.map((project) => {
-                        const projectText = projectsDict.items.find(p => p.id === project.id);
-                        if (!projectText) return null;
-                        const combinedProject = { ...project, ...projectText };
-                        return (
-                            <ProjectCard key={project.id} project={combinedProject} lang={lang} dictionary={dictionary} />
-                        )
-                    })}
+                    {featuredProjects.map((project) => (
+                        <ProjectCard key={project.slug} project={project} lang={lang} dictionary={dictionary} />
+                    ))}
                 </div>
                 <div className="text-center mt-12">
                     <Button size="lg" asChild>

@@ -1,18 +1,13 @@
-import { projects as projectsData } from "@/lib/data";
+import { projects } from "@/lib/data";
 import { PortfolioClient } from "@/app/portfolio/PortfolioClient";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
 
 export default async function PortfolioPage({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
-  const { portfolioPage, projects: projectsDict } = dictionary;
+  const { portfolioPage } = dictionary;
   
-  const projectsWithText = projectsData.map(p => {
-    const text = projectsDict.items.find(pt => pt.id === p.id);
-    return { ...p, ...text };
-  });
-
-  const categories = [...new Set(projectsWithText.map((p) => p.category!))];
+  const categories = [...new Set(projects.map((p) => p.category))];
 
   return (
     <div className="bg-background">
@@ -23,7 +18,7 @@ export default async function PortfolioPage({ params: { lang } }: { params: { la
         </p>
       </section>
 
-      <PortfolioClient projects={projectsWithText} categories={categories} lang={lang} dictionary={dictionary} />
+      <PortfolioClient projects={projects} categories={categories} lang={lang} dictionary={dictionary} />
     </div>
   );
 }

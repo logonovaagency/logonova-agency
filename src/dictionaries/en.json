@@ -44,53 +44,9 @@
   "portfolio": {
     "title": "Our Achievements",
     "subtitle": "A glimpse into some of our projects that demonstrate our expertise.",
-    "exploreAll": "Explore All Projects"
-  },
-  "projects": {
+    "exploreAll": "Explore All Projects",
     "viewProject": "View Project",
-    "all": "All",
-    "items": [
-      {
-        "id": "p1",
-        "title": "Taskly PME",
-        "description": "Complete intervention management and scheduling tool for SMEs.",
-        "longDescription": "Taskly SME is a SaaS solution designed to optimize the operations of small and medium-sized enterprises. It allows for intervention planning, real-time technician tracking, and detailed report generation.",
-        "details": [
-          { "title": "Client", "value": "Various SMEs" },
-          { "title": "Service", "value": "SaaS Development" }
-        ]
-      },
-      {
-        "id": "p2",
-        "title": "Slate Peed'z",
-        "description": "Pizza ordering platform with real-time tracking.",
-        "longDescription": "A seamless online ordering experience for a local pizzeria. Integration of a secure payment system and an interactive map for delivery tracking.",
-        "details": [
-          { "title": "Client", "value": "Slate Peed'z" },
-          { "title": "Service", "value": "E-commerce & API" }
-        ]
-      },
-      {
-        "id": "p3",
-        "title": "Café Paris Lomé",
-        "description": "Elegant website and digital menu for a prestigious restaurant.",
-        "longDescription": "Creation of a showcase website highlighting the restaurant's ambiance and cuisine. Development of a QR code accessible menu with easy updates for staff.",
-        "details": [
-          { "title": "Client", "value": "Café Paris Lomé" },
-          { "title": "Service", "value": "Showcase Site & QR Menu" }
-        ]
-      },
-      {
-        "id": "p4",
-        "title": "Wings Shake",
-        "description": "Fast-food quick ordering application.",
-        "longDescription": "A lightweight and fast web application for 'click and collect' ordering. Integration with Firebase for real-time order management by the restaurant.",
-        "details": [
-          { "title": "Client", "value": "Wings Shake" },
-          { "title": "Service", "value": "Web App" }
-        ]
-      }
-    ]
+    "all": "All"
   },
   "testimonials": {
     "title": "What Our Clients Say",
@@ -113,9 +69,15 @@
     "subtitle": "We take pride in our work. Explore a selection of our projects that showcase our commitment to quality and innovation."
   },
   "projectPage": {
-    "caseStudy": "Case Study",
-    "projectDetails": "Project Details",
-    "projectGallery": "Project Gallery"
+    "visitSite": "Visit Live Site",
+    "theChallenge": "The Challenge",
+    "theSolution": "The Solution",
+    "backToProjects": "Back to projects",
+    "nextProject": "Next Project",
+    "projectInfo": "Project Info",
+    "category": "Category",
+    "year": "Year",
+    "technologies": "Technologies"
   },
   "servicesPage": {
     "title": "Our Services",
@@ -125,35 +87,35 @@
     "title": "Let's Talk About Your Project",
     "subtitle": "Have an idea? We have the technical skills to make it happen.",
     "form": {
-        "name": "Full Name",
-        "namePlaceholder": "Your Name",
-        "email": "Professional Email",
-        "emailPlaceholder": "your.email@example.com",
-        "phone": "Phone Number",
-        "phonePlaceholder": "Your phone number (for WhatsApp)",
-        "projectType": "Project Type",
-        "projectTypePlaceholder": "Select a project type",
-        "projectTypes": [
-            { "value": "showcase-site", "label": "Showcase Site" },
-            { "value": "e-commerce", "label": "E-commerce" },
-            { "value": "saas-app", "label": "SaaS Application" },
-            { "value": "mobile-app", "label": "Mobile App" },
-            { "value": "other", "label": "Other" }
-        ],
-        "budget": "Estimated Budget",
-        "budgetPlaceholder": "Select a budget range",
-        "budgetOptions": [
-            { "value": "<1000", "label": "Less than $1,000" },
-            { "value": "1000-3000", "label": "$1,000 - $3,000" },
-            { "value": "3000-5000", "label": "$3,000 - $5,000" },
-            { "value": ">5000", "label": "More than $5,000" },
-            { "value": "discuss", "label": "Not defined / To be discussed" }
-        ],
-        "message": "Message",
-        "messagePlaceholder": "Tell us a little bit about your project",
-        "submit": "Send Message",
-        "success": "Thank you for your message! We will get back to you shortly.",
-        "error": "An unexpected error occurred. Please try again."
+      "name": "Full Name",
+      "namePlaceholder": "Your Name",
+      "email": "Professional Email",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your phone number (for WhatsApp)",
+      "projectType": "Project Type",
+      "projectTypePlaceholder": "Select a project type",
+      "projectTypes": [
+        { "value": "showcase-site", "label": "Showcase Site" },
+        { "value": "e-commerce", "label": "E-commerce" },
+        { "value": "saas-app", "label": "SaaS Application" },
+        { "value": "mobile-app", "label": "Mobile App" },
+        { "value": "other", "label": "Other" }
+      ],
+      "budget": "Estimated Budget",
+      "budgetPlaceholder": "Select a budget range",
+      "budgetOptions": [
+        { "value": "<1000", "label": "Less than $1,000" },
+        { "value": "1000-3000", "label": "$1,000 - $3,000" },
+        { "value": "3000-5000", "label": "$3,000 - $5,000" },
+        { "value": ">5000", "label": "More than $5,000" },
+        { "value": "discuss", "label": "Not defined / To be discussed" }
+      ],
+      "message": "Message",
+      "messagePlaceholder": "Tell us a little bit about your project",
+      "submit": "Send Message",
+      "success": "Thank you for your message! We will get back to you shortly.",
+      "error": "An unexpected error occurred. Please try again."
     }
   },
   "footer": {
