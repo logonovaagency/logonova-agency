@@ -1,17 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
-import { services as servicesData, projects as projectsData } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { services as servicesData } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ProjectCard } from "@/components/ProjectCard";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
+import { PortfolioSection } from "@/components/PortfolioSection";
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
-  const { hero, services, featuredWork, projects: projectsDict } = dictionary;
-  const featuredProjects = projectsData.filter(p => p.featured);
+  const { hero, services } = dictionary;
 
   return (
     <div className="flex flex-col">
@@ -82,31 +79,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
         </div>
       </section>
 
-      <section id="featured-work" className="py-20 md:py-32 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">{featuredWork.title}</h2>
-            <p className="text-lg text-muted-foreground mt-2 max-w-2xl mx-auto">
-              {featuredWork.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuredProjects.map((project) => {
-               const projectText = projectsDict.items.find(p => p.id === project.id);
-               if (!projectText) return null;
-               const combinedProject = { ...project, ...projectText };
-              return (
-                <ProjectCard key={project.id} project={combinedProject} lang={lang} dictionary={dictionary} />
-              )
-            })}
-          </div>
-           <div className="text-center mt-12">
-            <Button size="lg" asChild>
-              <Link href={`/${lang}/portfolio`}>{featuredWork.exploreAll}</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <PortfolioSection lang={lang} dictionary={dictionary} />
     </div>
   );
 }

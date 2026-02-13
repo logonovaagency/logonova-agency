@@ -9,7 +9,7 @@ import type { Dictionary } from "@/lib/dictionaries";
 import { Locale } from "../../i18n-config";
 
 type ProjectCardProps = {
-  project: Project & { title: string; category: string; description: string; };
+  project: Project & { title: string; description: string; };
   lang: Locale;
   dictionary: Dictionary;
 };
@@ -18,10 +18,10 @@ export function ProjectCard({ project, lang, dictionary }: ProjectCardProps) {
   const placeholderImage = PlaceHolderImages.find(p => p.id === project.imageId);
 
   return (
-    <Link href={`/${lang}/portfolio/${project.slug}`} className="group block">
-      <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
+    <Link href={`/${lang}/portfolio/${project.slug}`} className="group block h-full">
+      <Card className="h-full overflow-hidden transition-all duration-300 bg-slate-800/50 border border-slate-700 hover:border-primary">
         <CardHeader className="p-0">
-          <div className="relative aspect-[3/2] w-full overflow-hidden">
+          <div className="relative aspect-video w-full overflow-hidden">
             {placeholderImage && (
                <Image
                 src={placeholderImage.imageUrl}
@@ -33,12 +33,19 @@ export function ProjectCard({ project, lang, dictionary }: ProjectCardProps) {
             )}
           </div>
         </CardHeader>
-        <CardContent className="p-6">
-          <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-          <h3 className="text-xl font-headline font-bold mb-2">{project.title}</h3>
-          <p className="text-muted-foreground mb-4">{project.description}</p>
-          <div className="flex items-center text-primary font-semibold">
-            {dictionary.projects.viewCaseStudy}
+        <CardContent className="p-6 flex flex-col">
+          <p className="text-sm text-muted-foreground mb-2">{project.category}</p>
+          <h3 className="text-xl font-headline font-bold mb-3">{project.title}</h3>
+          <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.techs.map(tech => (
+              <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary font-normal">
+                {tech}
+              </Badge>
+            ))}
+          </div>
+          <div className="flex items-center text-primary font-semibold mt-auto">
+            {dictionary.projects.viewProject}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </div>
         </CardContent>

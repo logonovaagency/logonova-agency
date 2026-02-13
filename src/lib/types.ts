@@ -6,6 +6,8 @@ export type Project = {
   imageId: string;
   featured: boolean;
   galleryImageIds: string[];
+  category: string;
+  techs: string[];
 };
 
 export type Service = {

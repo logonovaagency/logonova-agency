@@ -41,65 +41,77 @@
       }
     ]
   },
-  "featuredWork": {
-    "title": "Nos réalisations",
-    "subtitle": "Un aperçu de certains de nos projets préférés.",
+  "portfolio": {
+    "title": "Nos Réalisations",
+    "subtitle": "Un aperçu de certains de nos projets qui démontrent notre expertise.",
     "exploreAll": "Explorer tous les projets"
   },
   "projects": {
-    "viewCaseStudy": "Voir l'étude de cas",
+    "viewProject": "Voir le projet",
     "all": "Tous",
     "items": [
       {
         "id": "p1",
-        "title": "Projet Alpha",
-        "category": "Développement Web",
-        "description": "Une plateforme web complète pour une startup technologique de premier plan.",
-        "longDescription": "Le projet Alpha consistait en un développement de A à Z d'une plateforme SaaS multi-tenant et évolutive. Nous nous sommes concentrés sur une architecture de microservices pour garantir une haute disponibilité et une scalabilité indépendante des services. L'interface utilisateur a été conçue avec un framework JavaScript moderne pour offrir une expérience rapide et réactive. Les principaux défis comprenaient la synchronisation des données en temps réel et les intégrations d'API tierces, qui ont été résolus en utilisant une combinaison de WebSockets et d'une file d'attente de messages dédiée.",
+        "title": "Taskly PME",
+        "description": "Outil complet de gestion d'interventions et de planning pour les PME.",
+        "longDescription": "Taskly PME est une solution SaaS conçue pour optimiser les opérations des petites et moyennes entreprises. Elle permet de planifier les interventions, de suivre les techniciens en temps réel et de générer des rapports détaillés.",
         "details": [
-          { "title": "Client", "value": "Innovate Inc." },
-          { "title": "Durée", "value": "6 mois" },
-          { "title": "Plateforme", "value": "Application Web" },
-          { "title": "Augmentation de l'engagement utilisateur", "value": "+150%" }
+          {
+            "title": "Client",
+            "value": "Divers PME"
+          },
+          {
+            "title": "Service",
+            "value": "Développement SaaS"
+          }
         ]
       },
       {
         "id": "p2",
-        "title": "Projet Beta",
-        "category": "Branding",
-        "description": "Refonte complète de la marque pour une grande entreprise de e-commerce.",
-        "longDescription": "Le projet Beta impliquait une refonte complète d'une marque de e-commerce établie pour attirer une clientèle plus jeune. Notre équipe a mené des études de marché approfondies pour informer la nouvelle stratégie de marque. Nous avons développé un nouveau logo, une nouvelle palette de couleurs, un nouveau système typographique et un ensemble complet de directives de marque. La nouvelle identité visuelle a été déployée sur leur site web, leurs réseaux sociaux et leurs emballages, entraînant une augmentation significative de la perception de la marque et de sa part de marché.",
+        "title": "Slate Peed'z",
+        "description": "Plateforme de commande de pizzas avec suivi en temps réel.",
+        "longDescription": "Une expérience de commande en ligne fluide pour une pizzeria locale. Intégration d'un système de paiement sécurisé et d'une carte interactive pour le suivi de livraison.",
         "details": [
-          { "title": "Client", "value": "ShopSphere" },
-          { "title": "Durée", "value": "3 mois" },
-          { "title": "Service", "value": "Branding & Identité" },
-          { "title": "Augmentation des mentions sociales", "value": "+300%" }
+          {
+            "title": "Client",
+            "value": "Slate Peed'z"
+          },
+          {
+            "title": "Service",
+            "value": "E-commerce & API"
+          }
         ]
       },
       {
         "id": "p3",
-        "title": "Projet Gamma",
-        "category": "Marketing",
-        "description": "Une campagne de marketing numérique ciblée pour stimuler les ventes.",
-        "longDescription": "Pour le projet Gamma, nous avons conçu et exécuté une campagne de marketing numérique multicanal visant à augmenter les ventes en ligne d'un client du secteur des biens de consommation. La stratégie comprenait des améliorations ciblées du référencement, une campagne de marketing de contenu avec des articles de blog et des vidéos, ainsi qu'une campagne publicitaire sur les principales plateformes de médias sociaux. Nous avons largement utilisé les tests A/B pour optimiser les textes publicitaires et les créations, ce qui a abouti à une campagne très efficace qui a dépassé les objectifs de vente du client.",
+        "title": "Café Paris Lomé",
+        "description": "Site élégant et menu numérique pour un restaurant prestigieux.",
+        "longDescription": "Création d'un site vitrine mettant en valeur l'ambiance et la cuisine du restaurant. Développement d'un menu accessible via QR code, avec des mises à jour faciles pour le personnel.",
         "details": [
-          { "title": "Client", "value": "Gadget Corp." },
-          { "title": "Durée", "value": "4 mois" },
-          { "title": "Service", "value": "Marketing Numérique" },
-          { "title": "Retour sur les dépenses publicitaires (ROAS)", "value": "5.2x" }
+          {
+            "title": "Client",
+            "value": "Café Paris Lomé"
+          },
+          {
+            "title": "Service",
+            "value": "Site Vitrine & Menu QR"
+          }
         ]
       },
       {
         "id": "p4",
-        "title": "Projet Delta",
-        "category": "Développement Web",
-        "description": "Refonte UI/UX et développement front-end pour une application mobile.",
-        "longDescription": "Le projet Delta visait à améliorer l'expérience utilisateur d'une application mobile existante. Nous avons commencé par une recherche utilisateur et des tests d'utilisabilité pour identifier les points de friction dans la conception actuelle. Sur la base de nos découvertes, nous avons créé une nouvelle série de wireframes et de maquettes haute fidélité, qui ont ensuite été développées en une nouvelle interface front-end à l'aide d'un framework multiplateforme. Le résultat a été une application plus intuitive et conviviale qui a vu une augmentation marquée de la rétention des utilisateurs.",
+        "title": "Wings Shake",
+        "description": "Application de commande rapide pour fast-food.",
+        "longDescription": "Application web légère et rapide pour la commande en 'click and collect'. Intégration avec Firebase pour une gestion en temps réel des commandes par le restaurant.",
         "details": [
-          { "title": "Client", "value": "ConnectApp" },
-          { "title": "Durée", "value": "5 mois" },
-          { "title": "Plateforme", "value": "Application mobile" },
-          { "title": "Diminution du taux de désabonnement", "value": "-40%" }
+          {
+            "title": "Client",
+            "value": "Wings Shake"
+          },
+          {
+            "title": "Service",
+            "value": "Web App"
+          }
         ]
       }
     ]
@@ -121,16 +133,16 @@
     "title": "Contactez-nous",
     "subtitle": "Vous avez un projet en tête ? Nous serions ravis d'en discuter. Remplissez le formulaire ou utilisez nos coordonnées ci-dessous.",
     "form": {
-        "name": "Nom",
-        "namePlaceholder": "Votre nom",
-        "email": "Email",
-        "emailPlaceholder": "votre.email@exemple.com",
-        "subject": "Sujet",
-        "subjectPlaceholder": "Concernant vos services",
-        "message": "Message",
-        "messagePlaceholder": "Parlez-nous un peu de votre projet",
-        "submit": "Envoyer le message",
-        "success": "Merci pour votre message ! Nous vous recontacterons sous peu."
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre.email@exemple.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Concernant vos services",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-nous un peu de votre projet",
+      "submit": "Envoyer le message",
+      "success": "Merci pour votre message ! Nous vous recontacterons sous peu."
     }
   },
   "footer": {

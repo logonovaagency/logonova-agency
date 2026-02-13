@@ -41,65 +41,53 @@
       }
     ]
   },
-  "featuredWork": {
-    "title": "Featured Work",
-    "subtitle": "A glimpse into some of our favorite projects.",
+  "portfolio": {
+    "title": "Our Achievements",
+    "subtitle": "A glimpse into some of our projects that demonstrate our expertise.",
     "exploreAll": "Explore All Projects"
   },
   "projects": {
-    "viewCaseStudy": "View Case Study",
+    "viewProject": "View Project",
     "all": "All",
     "items": [
       {
         "id": "p1",
-        "title": "Project Alpha",
-        "category": "Web Development",
-        "description": "A comprehensive web platform for a leading tech startup.",
-        "longDescription": "Project Alpha was a ground-up development of a scalable, multi-tenant SaaS platform. We focused on a microservices architecture to ensure high availability and independent scalability of services. The user interface was built with a modern JavaScript framework to provide a fast, responsive experience. Key challenges included real-time data synchronization and third-party API integrations, which were solved using a combination of WebSockets and a dedicated message queue system.",
+        "title": "Taskly PME",
+        "description": "Complete intervention management and scheduling tool for SMEs.",
+        "longDescription": "Taskly SME is a SaaS solution designed to optimize the operations of small and medium-sized enterprises. It allows for intervention planning, real-time technician tracking, and detailed report generation.",
         "details": [
-          { "title": "Client", "value": "Innovate Inc." },
-          { "title": "Timeline", "value": "6 Months" },
-          { "title": "Platform", "value": "Web Application" },
-          { "title": "Increase in User Engagement", "value": "+150%" }
+          { "title": "Client", "value": "Various SMEs" },
+          { "title": "Service", "value": "SaaS Development" }
         ]
       },
       {
         "id": "p2",
-        "title": "Project Beta",
-        "category": "Branding",
-        "description": "Complete rebranding for a major e-commerce company.",
-        "longDescription": "Project Beta involved a complete overhaul of an established e-commerce brand to appeal to a younger demographic. Our team conducted extensive market research to inform the new brand strategy. We developed a new logo, color palette, typography system, and a comprehensive set of brand guidelines. The new visual identity was rolled out across their website, social media channels, and packaging, resulting in a significant boost in brand perception and market share.",
+        "title": "Slate Peed'z",
+        "description": "Pizza ordering platform with real-time tracking.",
+        "longDescription": "A seamless online ordering experience for a local pizzeria. Integration of a secure payment system and an interactive map for delivery tracking.",
         "details": [
-          { "title": "Client", "value": "ShopSphere" },
-          { "title": "Timeline", "value": "3 Months" },
-          { "title": "Service", "value": "Branding & Identity" },
-          { "title": "Increase in Social Mentions", "value": "+300%" }
+          { "title": "Client", "value": "Slate Peed'z" },
+          { "title": "Service", "value": "E-commerce & API" }
         ]
       },
       {
         "id": "p3",
-        "title": "Project Gamma",
-        "category": "Marketing",
-        "description": "A targeted digital marketing campaign to boost sales.",
-        "longDescription": "For Project Gamma, we designed and executed a multi-channel digital marketing campaign aimed at increasing online sales for a consumer goods client. The strategy included targeted SEO improvements, a content marketing push with blog posts and videos, and a social media advertising campaign on major platforms. We utilized A/B testing extensively to optimize ad copy and creative, leading to a highly efficient campaign that exceeded the client's sales goals.",
+        "title": "Café Paris Lomé",
+        "description": "Elegant website and digital menu for a prestigious restaurant.",
+        "longDescription": "Creation of a showcase website highlighting the restaurant's ambiance and cuisine. Development of a QR code accessible menu with easy updates for staff.",
         "details": [
-          { "title": "Client", "value": "Gadget Corp." },
-          { "title": "Timeline", "value": "4 Months" },
-          { "title": "Service", "value": "Digital Marketing" },
-          { "title": "Return on Ad Spend (ROAS)", "value": "5.2x" }
+          { "title": "Client", "value": "Café Paris Lomé" },
+          { "title": "Service", "value": "Showcase Site & QR Menu" }
         ]
       },
       {
         "id": "p4",
-        "title": "Project Delta",
-        "category": "Web Development",
-        "description": "UI/UX overhaul and front-end development for a mobile app.",
-        "longDescription": "Project Delta focused on improving the user experience of an existing mobile application. We started with user research and usability testing to identify pain points in the current design. Based on our findings, we created a new set of wireframes and high-fidelity mockups, which were then developed into a new front-end using a cross-platform framework. The result was a more intuitive, user-friendly application that saw a marked increase in user retention.",
+        "title": "Wings Shake",
+        "description": "Fast-food quick ordering application.",
+        "longDescription": "A lightweight and fast web application for 'click and collect' ordering. Integration with Firebase for real-time order management by the restaurant.",
         "details": [
-          { "title": "Client", "value": "ConnectApp" },
-          { "title": "Timeline", "value": "5 Months" },
-          { "title": "Platform", "value": "Mobile Application" },
-          { "title": "Decrease in User Churn", "value": "-40%" }
+          { "title": "Client", "value": "Wings Shake" },
+          { "title": "Service", "value": "Web App" }
         ]
       }
     ]

@@ -19,30 +19,38 @@ export const services: Omit<Service, 'icon'>[] & {icon: any}[] = [
 export const projects: Project[] = [
   {
     id: 'p1',
-    slug: 'project-alpha',
-    imageId: 'project-1-thumb',
+    slug: 'taskly-pme',
+    imageId: 'taskly-thumb',
     featured: true,
-    galleryImageIds: ['project-1-gallery-1', 'project-1-gallery-2'],
+    galleryImageIds: ['taskly-gallery-1', 'taskly-gallery-2'],
+    category: "SaaS / Gestion",
+    techs: ["Next.js", "Node.js"]
   },
   {
     id: 'p2',
-    slug: 'project-beta',
-    imageId: 'project-2-thumb',
+    slug: 'slate-peedz',
+    imageId: 'slate-peedz-thumb',
     featured: true,
-    galleryImageIds: ['project-2-gallery-1', 'project-2-gallery-2'],
+    galleryImageIds: ['slate-peedz-gallery-1', 'slate-peedz-gallery-2'],
+    category: "E-commerce",
+    techs: ["React", "Payment API"]
   },
   {
     id: 'p3',
-    slug: 'project-gamma',
-    imageId: 'project-3-thumb',
-    featured: false,
-    galleryImageIds: ['project-3-gallery-1', 'project-3-gallery-2'],
+    slug: 'cafe-paris-lome',
+    imageId: 'cafe-paris-lome-thumb',
+    featured: true,
+    galleryImageIds: ['cafe-paris-lome-gallery-1', 'cafe-paris-lome-gallery-2'],
+    category: "Vitrine / Food",
+    techs: ["HTML/CSS/JS", "QR Menu"]
   },
   {
     id: 'p4',
-    slug: 'project-delta',
-    imageId: 'project-4-thumb',
+    slug: 'wings-shake',
+    imageId: 'wings-shake-thumb',
     featured: true,
-    galleryImageIds: ['project-4-gallery-1', 'project-4-gallery-2'],
+    galleryImageIds: ['wings-shake-gallery-1', 'wings-shake-gallery-2'],
+    category: "Web app App",
+    techs: ["html css", "Firebase"]
   },
 ];
