@@ -122,15 +122,33 @@
     "subtitle": "From concept to launch, we provide the expertise to bring your digital vision to life."
   },
   "contactPage": {
-    "title": "Get in Touch",
-    "subtitle": "Have a project in mind? We'd love to hear about it. Fill out the form or use our contact details below.",
+    "title": "Let's Talk About Your Project",
+    "subtitle": "Have an idea? We have the technical skills to make it happen.",
     "form": {
-        "name": "Name",
+        "name": "Full Name",
         "namePlaceholder": "Your Name",
-        "email": "Email",
+        "email": "Professional Email",
         "emailPlaceholder": "your.email@example.com",
-        "subject": "Subject",
-        "subjectPlaceholder": "Regarding your services",
+        "phone": "Phone Number",
+        "phonePlaceholder": "Your phone number (for WhatsApp)",
+        "projectType": "Project Type",
+        "projectTypePlaceholder": "Select a project type",
+        "projectTypes": [
+            { "value": "showcase-site", "label": "Showcase Site" },
+            { "value": "e-commerce", "label": "E-commerce" },
+            { "value": "saas-app", "label": "SaaS Application" },
+            { "value": "mobile-app", "label": "Mobile App" },
+            { "value": "other", "label": "Other" }
+        ],
+        "budget": "Estimated Budget",
+        "budgetPlaceholder": "Select a budget range",
+        "budgetOptions": [
+            { "value": "<1000", "label": "Less than $1,000" },
+            { "value": "1000-3000", "label": "$1,000 - $3,000" },
+            { "value": "3000-5000", "label": "$3,000 - $5,000" },
+            { "value": ">5000", "label": "More than $5,000" },
+            { "value": "discuss", "label": "Not defined / To be discussed" }
+        ],
         "message": "Message",
         "messagePlaceholder": "Tell us a little bit about your project",
         "submit": "Send Message",

@@ -7,7 +7,9 @@ import { i18n, type Locale } from "../../../i18n-config";
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Invalid email address."),
-  subject: z.string().min(5, "Subject must be at least 5 characters."),
+  phone: z.string().min(8, "Phone number seems too short."),
+  projectType: z.string({ required_error: "Please select a project type." }),
+  budget: z.string({ required_error: "Please select a budget." }),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 
@@ -17,7 +19,9 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   const validatedFields = contactSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
-    subject: formData.get("subject"),
+    phone: formData.get("phone"),
+    projectType: formData.get("projectType"),
+    budget: formData.get("budget"),
     message: formData.get("message"),
   });
 

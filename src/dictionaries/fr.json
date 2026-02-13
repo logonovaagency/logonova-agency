@@ -146,15 +146,33 @@
     "subtitle": "Du concept au lancement, nous fournissons l'expertise nécessaire pour donner vie à votre vision numérique."
   },
   "contactPage": {
-    "title": "Contactez-nous",
-    "subtitle": "Vous avez un projet en tête ? Nous serions ravis d'en discuter. Remplissez le formulaire ou utilisez nos coordonnées ci-dessous.",
+    "title": "Parlons de votre projet",
+    "subtitle": "Vous avez une idée ? Nous avons les compétences techniques pour la réaliser.",
     "form": {
-      "name": "Nom",
+      "name": "Nom complet",
       "namePlaceholder": "Votre nom",
-      "email": "Email",
+      "email": "Email professionnel",
       "emailPlaceholder": "votre.email@exemple.com",
-      "subject": "Sujet",
-      "subjectPlaceholder": "Concernant vos services",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Votre numéro (pour WhatsApp)",
+      "projectType": "Type de projet",
+      "projectTypePlaceholder": "Sélectionnez un type de projet",
+      "projectTypes": [
+        { "value": "showcase-site", "label": "Site Vitrine" },
+        { "value": "e-commerce", "label": "E-commerce" },
+        { "value": "saas-app", "label": "Application SaaS" },
+        { "value": "mobile-app", "label": "Application Mobile" },
+        { "value": "other", "label": "Autre" }
+      ],
+      "budget": "Budget Estimé",
+      "budgetPlaceholder": "Sélectionnez une fourchette de prix",
+      "budgetOptions": [
+        { "value": "<1000", "label": "Moins de $1,000" },
+        { "value": "1000-3000", "label": "$1,000 - $3,000" },
+        { "value": "3000-5000", "label": "$3,000 - $5,000" },
+        { "value": ">5000", "label": "Plus de $5,000" },
+        { "value": "discuss", "label": "Non défini / À discuter" }
+      ],
       "message": "Message",
       "messagePlaceholder": "Parlez-nous un peu de votre projet",
       "submit": "Envoyer le message",
