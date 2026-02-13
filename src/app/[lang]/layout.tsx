@@ -6,10 +6,40 @@ import { Toaster } from "@/components/ui/toaster";
 import { i18n, type Locale } from '../../../i18n-config';
 import { getDictionary } from '@/lib/dictionaries';
 
-export const metadata: Metadata = {
-  title: 'Logonova Agency',
-  description: 'A modern digital agency for the modern web.',
-};
+export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(lang);
+  const { seo } = dictionary;
+  
+  return {
+    title: {
+      template: '%s | Logonova',
+      default: seo.defaultTitle,
+    },
+    description: seo.description,
+    keywords: ["Agence web Togo", "Développeur React Lomé", "Création site internet Afrique", "Intégration paiement KkiaPay", "Next.js developer", "Elias Apedo"],
+    openGraph: {
+      title: seo.defaultTitle,
+      description: seo.description,
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Logonova Agency',
+        },
+      ],
+      siteName: 'Logonova Agency',
+      locale: lang,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seo.defaultTitle,
+      description: seo.description,
+      images: ['/og-image.jpg'],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }))
@@ -42,3 +72,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
+    

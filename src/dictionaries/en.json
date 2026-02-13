@@ -183,5 +183,16 @@
     "connect": "Connect",
     "copyright": "© {year} Logonova Agency. All rights reserved.",
     "founder": "Founded by APEDO Elias Josue Kossi."
+  },
+  "seo": {
+    "defaultTitle": "Logonova | Digital Agency & Web Development (Togo)",
+    "description": "Web development agency based in Lomé. Experts in custom websites, SaaS, mobile apps, and payment integration (KkiaPay, PayGate) in Africa."
+  },
+  "notFoundPage": {
+    "title": "System Error: Page Not Found",
+    "subtitle": "It seems you have reached an unmapped area of our network.",
+    "button": "Return to Base (Home)"
   }
 }
+
+    

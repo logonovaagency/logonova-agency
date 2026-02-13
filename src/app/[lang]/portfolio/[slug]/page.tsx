@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import { i18n, type Locale } from "../../../../../i18n-config";
+import type { Metadata } from 'next';
 
 type ProjectPageProps = {
   params: {
@@ -14,6 +15,27 @@ type ProjectPageProps = {
     lang: Locale;
   };
 };
+
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const project = projects.find((p) => p.slug === params.slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found | Logonova",
+    };
+  }
+
+  const description = project.description[params.lang] || project.description.fr;
+
+  return {
+    title: project.title, // The template in layout will add "| Logonova"
+    description: description,
+    openGraph: {
+      title: `${project.title} | Logonova`,
+      description: description,
+    }
+  };
+}
 
 export async function generateStaticParams() {
   return i18n.locales.flatMap((lang) =>
@@ -125,3 +147,5 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     </div>
   );
 }
+
+    
