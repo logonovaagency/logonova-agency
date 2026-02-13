@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Rocket, Twitter, Github, Linkedin } from "lucide-react";
+import { Twitter, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
+import LogonovaIcon from "@/components/LogonovaIcon";
 
 export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Dictionary }) {
   const { footer, nav } = dictionary;
@@ -12,7 +13,7 @@ export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Diction
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col space-y-4">
             <Link href={`/${lang}`} className="flex items-center space-x-2">
-              <Rocket className="h-8 w-8 text-primary" />
+              <LogonovaIcon className="h-10 w-10 text-primary" />
               <span className="font-bold font-headline text-2xl">Logonova</span>
             </Link>
             <p className="text-muted-foreground max-w-sm">

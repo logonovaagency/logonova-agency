@@ -1,9 +1,9 @@
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Rocket } from "lucide-react";
+import { Menu } from "lucide-react";
+import LogonovaIcon from "@/components/LogonovaIcon";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -57,7 +57,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
-          <Rocket className="h-6 w-6 text-primary" />
+          <LogonovaIcon className="h-8 w-8 text-primary" />
           <span className="font-bold font-headline text-lg">Logonova</span>
         </Link>
         
@@ -102,7 +102,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
                 <SheetHeader>
                   <SheetTitle>
                      <Link href={`/${lang}`} className="flex items-center space-x-2">
-                      <Rocket className="h-6 w-6 text-primary" />
+                      <LogonovaIcon className="h-8 w-8 text-primary" />
                       <span className="font-bold font-headline text-lg">Logonova</span>
                     </Link>
                   </SheetTitle>
