@@ -80,16 +80,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
         description: state.message,
       });
       form.reset();
-    } else if (state.errors) {
-      Object.entries(state.errors).forEach(([key, value]) => {
-        if (value) {
-          form.setError(key as keyof ContactFormValues, {
-            type: "server",
-            message: value[0],
-          });
-        }
-      });
-    } else if (state.message && !state.success) {
+    } else if (state.message && !state.success && !state.errors) {
       toast({
         variant: "destructive",
         title: "Uh oh! Something went wrong.",
@@ -98,9 +89,22 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
     }
   }, [state, form, toast]);
 
+  useEffect(() => {
+    if (state.errors) {
+        Object.entries(state.errors).forEach(([key, value]) => {
+            if (value) {
+            form.setError(key as keyof ContactFormValues, {
+                type: "server",
+                message: value[0],
+            });
+            }
+        });
+    }
+  }, [state.errors, form]);
+
   return (
     <Form {...form}>
-      <form action={formAction} className="space-y-6">
+      <form onSubmit={form.handleSubmit(() => {})} action={formAction} className="space-y-6">
         <input type="hidden" name="lang" value={lang} />
         <FormField
           control={form.control}
