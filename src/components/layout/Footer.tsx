@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Twitter, Github, Linkedin } from "lucide-react";
+import { Twitter, Github, Linkedin, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
@@ -14,7 +14,7 @@ export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Diction
           <div className="flex flex-col space-y-4">
             <Link href={`/${lang}`} className="flex items-center space-x-2">
               <LogonovaIcon className="h-10 w-10 text-primary" />
-              <span className="font-bold font-headline text-2xl">Logonova</span>
+              <span className="font-bold font-headline text-2xl">Logo<span className="text-primary">nova</span></span>
             </Link>
             <p className="text-muted-foreground max-w-sm">
               {footer.slogan}
@@ -26,6 +26,7 @@ export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Diction
               <li><Link href={`/${lang}`} className="text-muted-foreground hover:text-primary transition-colors">{nav.home}</Link></li>
               <li><Link href={`/${lang}/services`} className="text-muted-foreground hover:text-primary transition-colors">{nav.services}</Link></li>
               <li><Link href={`/${lang}/portfolio`} className="text-muted-foreground hover:text-primary transition-colors">{nav.portfolio}</Link></li>
+              <li><Link href={`/${lang}/about`} className="text-muted-foreground hover:text-primary transition-colors">{nav.about}</Link></li>
               <li><Link href={`/${lang}/contact`} className="text-muted-foreground hover:text-primary transition-colors">{nav.contact}</Link></li>
             </ul>
           </div>
@@ -33,20 +34,39 @@ export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Diction
             <h3 className="text-lg font-headline font-semibold mb-4">{footer.connect}</h3>
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Twitter">
+                <a href="https://x.com/LogonovaAgency" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <Twitter className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="GitHub">
+                <a href="https://github.com/logonovaagency" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/logonova-agency" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
+               <Button variant="ghost" size="icon" asChild>
+                <a href="https://wa.me/22872229856" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                  <MessageCircle className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+            <div className="mt-6 space-y-3 text-sm">
+                <a href="mailto:contact.logonovaagency@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary">
+                    <Mail className="h-4 w-4" />
+                    contact.logonovaagency@gmail.com
+                </a>
+                <a href="tel:+22872229856" className="flex items-center gap-3 text-muted-foreground hover:text-primary">
+                    <Phone className="h-4 w-4" />
+                    +228 72 22 98 56
+                </a>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="h-4 w-4" />
+                    Lomé, Togo
+                </div>
             </div>
           </div>
         </div>

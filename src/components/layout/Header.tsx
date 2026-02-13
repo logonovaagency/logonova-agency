@@ -58,7 +58,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
       <div className="container flex h-16 items-center">
         <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
           <LogonovaIcon className="h-8 w-8 text-primary" />
-          <span className="font-bold font-headline text-lg">Logonova</span>
+          <span className="font-bold font-headline text-lg">Logo<span className="text-primary">nova</span></span>
         </Link>
         
         {/* Desktop Nav */}
@@ -103,7 +103,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
                   <SheetTitle>
                      <Link href={`/${lang}`} className="flex items-center space-x-2">
                       <LogonovaIcon className="h-8 w-8 text-primary" />
-                      <span className="font-bold font-headline text-lg">Logonova</span>
+                      <span className="font-bold font-headline text-lg">Logo<span className="text-primary">nova</span></span>
                     </Link>
                   </SheetTitle>
                 </SheetHeader>

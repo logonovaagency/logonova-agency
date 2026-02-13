@@ -1,5 +1,5 @@
 import { ContactForm } from "@/app/contact/ContactForm";
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
 import { Button } from "@/components/ui/button";
@@ -38,11 +38,11 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:contact@logonova.site" className="text-muted-foreground hover:text-primary">contact@logonova.site</a>
+                <a href="mailto:contact.logonovaagency@gmail.com" className="text-muted-foreground hover:text-primary">contact.logonovaagency@gmail.com</a>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-muted-foreground">+228 XX XX XX XX</span>
+                <a href="tel:+22872229856" className="text-muted-foreground hover:text-primary">+228 72 22 98 56</a>
               </div>
               <div className="flex items-center gap-4">
                 <MapPin className="w-5 h-5 text-primary" />
@@ -51,13 +51,16 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
             </div>
             <div className="flex space-x-4">
                 <Button variant="ghost" size="icon" asChild>
-                    <Link href="#"><Linkedin className="h-5 w-5" /></Link>
+                    <Link href="https://www.linkedin.com/in/logonova-agency" target="_blank" rel="noopener noreferrer"><Linkedin className="h-5 w-5" /></Link>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
-                    <Link href="#"><Github className="h-5 w-5" /></Link>
+                    <Link href="https://github.com/logonovaagency" target="_blank" rel="noopener noreferrer"><Github className="h-5 w-5" /></Link>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
-                    <Link href="#"><WhatsAppIcon className="h-5 w-5" /></Link>
+                    <Link href="https://wa.me/22872229856" target="_blank" rel="noopener noreferrer"><WhatsAppIcon className="h-5 w-5" /></Link>
+                </Button>
+                <Button variant="ghost" size="icon" asChild>
+                    <Link href="https://x.com/LogonovaAgency" target="_blank" rel="noopener noreferrer"><Twitter className="h-5 w-5" /></Link>
                 </Button>
             </div>
           </div>
