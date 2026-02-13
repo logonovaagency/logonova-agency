@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract background for the hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBkYXJrfGVufDB8fHx8MTc3MDg4OTAzN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract dark"
+    },
+    {
+      "id": "project-1-thumb",
+      "description": "Thumbnail for Project Alpha",
+      "imageUrl": "https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0ZWNobm9sb2d5JTIwYWJzdHJhY3R8ZW58MHx8fHwxNzcwOTAwMDMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology abstract"
+    },
+    {
+      "id": "project-2-thumb",
+      "description": "Thumbnail for Project Beta",
+      "imageUrl": "https://images.unsplash.com/photo-1658863025658-4a259cc68fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxicmFuZGluZyUyMGRlc2lnbnxlbnwwfHx8fDE3NzA5NzQzMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "branding design"
+    },
+    {
+      "id": "project-3-thumb",
+      "description": "Thumbnail for Project Gamma",
+      "imageUrl": "https://images.unsplash.com/photo-1618044733300-9472054094ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXJrZXRpbmclMjBhbmFseXNpc3xlbnwwfHx8fDE3NzA5ODMxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "marketing analysis"
+    },
+    {
+      "id": "project-4-thumb",
+      "description": "Thumbnail for Project Delta",
+      "imageUrl": "https://images.unsplash.com/photo-1618788372246-79faff0c3742?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1c2VyJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc3MDg4MjU4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user interface"
+    },
+    {
+      "id": "project-1-gallery-1",
+      "description": "Gallery image 1 for Project Alpha",
+      "imageUrl": "https://images.unsplash.com/photo-1648134859177-66e35b61e106?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWJzaXRlJTIwc2NyZWVuc2hvdHxlbnwwfHx8fDE3NzA5MzMwMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website screenshot"
+    },
+    {
+      "id": "project-1-gallery-2",
+      "description": "Gallery image 2 for Project Alpha",
+      "imageUrl": "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzcwOTY0NDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-2-gallery-1",
+      "description": "Gallery image 1 for Project Beta",
+      "imageUrl": "https://images.unsplash.com/photo-1689872330350-87e38c591b4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb2dvJTIwdmFyaWF0aW9uc3xlbnwwfHx8fDE3NzA5ODMxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo variations"
+    },
+    {
+      "id": "project-2-gallery-2",
+      "description": "Gallery image 2 for Project Beta",
+      "imageUrl": "https://images.unsplash.com/photo-1758614364711-ca59728b4921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmFuZCUyMGd1aWRlbGluZXN8ZW58MHx8fHwxNzcwOTgzMTY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "brand guidelines"
+    },
+    {
+      "id": "project-3-gallery-1",
+      "description": "Gallery image 1 for Project Gamma",
+      "imageUrl": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzcwOTA2MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "analytics dashboard"
+    },
+    {
+      "id": "project-3-gallery-2",
+      "description": "Gallery image 2 for Project Gamma",
+      "imageUrl": "https://images.unsplash.com/photo-1607968565043-36af90dde238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb2NpYWwlMjBtZWRpYSUyMGNhbXBhaWdufGVufDB8fHx8MTc3MDk4MzE2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social media campaign"
+    },
+    {
+      "id": "project-4-gallery-1",
+      "description": "Gallery image 1 for Project Delta",
+      "imageUrl": "https://images.unsplash.com/photo-1589978838416-9fe37be3e6d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aXJlZnJhbWVzJTIwZGVzaWdufGVufDB8fHx8MTc3MDk4MzE2NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireframes design"
+    },
+    {
+      "id": "project-4-gallery-2",
+      "description": "Gallery image 2 for Project Delta",
+      "imageUrl": "https://images.unsplash.com/photo-1743385779313-ac03bb0f997b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dXNlciUyMGZsb3d8ZW58MHx8fHwxNzcwOTgzMTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "user flow"
+    }
+  ]
 }
