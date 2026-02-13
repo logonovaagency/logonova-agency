@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -30,6 +31,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
     { href: `/${lang}`, label: dictionary.nav.home },
     { href: `/${lang}/services`, label: dictionary.nav.services },
     { href: `/${lang}/portfolio`, label: dictionary.nav.portfolio },
+    { href: `/${lang}/about`, label: dictionary.nav.about },
     { href: `/${lang}/contact`, label: dictionary.nav.contact },
   ];
 
@@ -42,7 +44,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
         className={cn(
           "text-foreground/70 hover:text-foreground hover:no-underline transition-colors",
           {
-            "text-primary hover:text-primary font-semibold": pathname === link.href,
+            "text-primary hover:text-primary font-semibold": pathname === link.href || (link.href.length > 3 && pathname.startsWith(link.href)),
             "text-xl w-full justify-start py-6": isMobile,
           }
         )}

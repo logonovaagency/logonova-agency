@@ -1,8 +1,10 @@
+
 {
   "nav": {
     "home": "Accueil",
     "services": "Services",
     "portfolio": "Portfolio",
+    "about": "À Propos",
     "contact": "Contact",
     "getQuote": "Obtenir un devis"
   },
@@ -116,6 +118,43 @@
       "submit": "Envoyer le message",
       "success": "Merci pour votre message ! Nous vous recontacterons sous peu.",
       "error": "Une erreur inattendue est survenue. Veuillez réessayer."
+    }
+  },
+   "aboutPage": {
+    "hero": {
+      "title": "Plus qu'une agence, votre partenaire technique.",
+      "subtitle": "Nous aidons les entreprises togolaises et internationales à dominer leur marché grâce à des outils numériques sur-mesure."
+    },
+    "mission": {
+      "title": "Digitaliser l'Afrique, une ligne de code à la fois.",
+      "text": "Notre mission est de fournir des solutions technologiques de classe mondiale qui sont non seulement innovantes, mais aussi parfaitement adaptées aux réalités du marché africain. Nous croyons au pouvoir des paiements mobiles, de l'accessibilité et de la performance pour créer des opportunités et stimuler la croissance locale."
+    },
+    "founder": {
+      "name": "APEDO Elias Josue Kossi",
+      "role": "Fondateur & Développeur Principal",
+      "bio": "Passionné par le développement web et les solutions SaaS. Je construis des architectures robustes (React, Node.js) pour résoudre des problèmes réels et apporter une valeur tangible aux entreprises.",
+      "stack": "Ma stack :"
+    },
+    "values": {
+      "title": "Ce qui nous définit",
+      "items": [
+        {
+          "title": "Innovation",
+          "description": "Nous sommes constamment à la pointe des technologies comme Next.js et les PWA pour vous offrir des solutions pérennes et performantes."
+        },
+        {
+          "title": "Local & Global",
+          "description": "Une compréhension profonde du marché africain (paiements, connectivité) combinée à des standards de développement internationaux."
+        },
+        {
+          "title": "Transparence",
+          "description": "Pas de coûts cachés ni de jargon technique. Vous bénéficiez d'un suivi clair et en temps réel de l'avancement de votre projet."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à lancer votre projet ?",
+      "button": "Contactez-nous"
     }
   },
   "footer": {
