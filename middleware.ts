@@ -6,26 +6,31 @@ import { i18n } from './i18n-config'
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // Check if there is any supported locale in the pathname.
-  // This check is true for paths like `/` or `/about`, but false for `/fr/about` or `/en/contact`.
-  const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-
-  // If the pathname is missing a locale, redirect to the default locale.
-  if (pathnameIsMissingLocale) {
-    const locale = i18n.defaultLocale
-
-    // This will redirect:
-    // - `/` to `/fr`
-    // - `/about` to `/fr/about`
-    return NextResponse.redirect(
-      new URL(
-        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-        request.url
-      )
-    )
+  // 1. Handle redirect from prefixed default locale to non-prefixed path
+  // This ensures that /fr/about is redirected to /about
+  if (
+    pathname.startsWith(`/${i18n.defaultLocale}/`) ||
+    pathname === `/${i18n.defaultLocale}`
+  ) {
+    const newPath = pathname.replace(`/${i18n.defaultLocale}`, '') || '/'
+    return NextResponse.redirect(new URL(newPath, request.url))
   }
+
+  // 2. Check if the path is for a supported but non-default locale. If so, do nothing.
+  const isExplicitNonDefaultLocale = i18n.locales
+    .filter((l) => l !== i18n.defaultLocale)
+    .some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
+
+  if (isExplicitNonDefaultLocale) {
+    return
+  }
+
+  // 3. At this point, the path is missing a locale prefix.
+  // It should be rewritten to the default locale.
+  // e.g. /about -> /fr/about (internally)
+  return NextResponse.rewrite(
+    new URL(`/${i18n.defaultLocale}${pathname}`, request.url)
+  )
 }
 
 export const config = {
