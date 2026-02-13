@@ -5,24 +5,35 @@ import { projects } from '@/lib/data'
 const BASE_URL = 'https://logonova.site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/services', '/portfolio', '/about', '/contact']
-  
-  const staticUrls = staticRoutes.flatMap(route => 
-    i18n.locales.map(locale => ({
-      url: `${BASE_URL}/${locale}${route}`,
-      lastModified: new Date(),
-    }))
-  )
-
-  const projectUrls = projects.flatMap(project => 
-    i18n.locales.map(locale => ({
-      url: `${BASE_URL}/${locale}/portfolio/${project.slug}`,
-      lastModified: new Date(),
-    }))
-  )
+  const staticRoutes = ['/', '/services', '/portfolio', '/about', '/contact', '/pricing']
  
-  return [
-    ...staticUrls,
-    ...projectUrls
-  ]
+  const routes: MetadataRoute.Sitemap = [];
+
+  i18n.locales.forEach(locale => {
+    // Handle static pages for each locale
+    staticRoutes.forEach(route => {
+      // For default locale 'fr', don't add prefix. For 'en', add /en prefix.
+      const path = locale === i18n.defaultLocale 
+        ? route 
+        : (route === '/' ? `/${locale}` : `/${locale}${route}`);
+
+      routes.push({
+        url: `${BASE_URL}${path}`,
+        lastModified: new Date(),
+      });
+    });
+
+    // Handle project pages for each locale
+    projects.forEach(project => {
+      const path = locale === i18n.defaultLocale
+        ? `/portfolio/${project.slug}`
+        : `/${locale}/portfolio/${project.slug}`;
+      routes.push({
+        url: `${BASE_URL}${path}`,
+        lastModified: new Date(),
+      });
+    });
+  });
+ 
+  return routes;
 }

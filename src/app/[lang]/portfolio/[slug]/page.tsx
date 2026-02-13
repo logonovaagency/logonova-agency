@@ -38,12 +38,18 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 }
 
 export async function generateStaticParams() {
-  return i18n.locales.flatMap((lang) =>
-    projects.map((project) => ({
-      lang: lang,
-      slug: project.slug,
-    }))
-  );
+  const paths: { lang: Locale, slug: string }[] = [];
+
+  for (const lang of i18n.locales) {
+    for (const project of projects) {
+      paths.push({
+        lang: lang,
+        slug: project.slug,
+      });
+    }
+  }
+
+  return paths;
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
@@ -147,5 +153,3 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     </div>
   );
 }
-
-    
