@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { i18n } from '../i18n-config'
+import { i18n } from '../../i18n-config'
 import { projects } from '@/lib/data'
  
 const BASE_URL = 'https://logonova.site'
@@ -26,5 +26,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projectUrls
   ]
 }
-
-    
