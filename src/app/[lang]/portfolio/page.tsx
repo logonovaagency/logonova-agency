@@ -3,8 +3,8 @@ import { PortfolioClient } from "@/app/portfolio/PortfolioClient";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
 
-export default async function PortfolioPage({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang);
+export default async function PortfolioPage({ params }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(params.lang);
   const { portfolioPage } = dictionary;
   
   const categories = [...new Set(projects.map((p) => p.category))];
@@ -18,7 +18,7 @@ export default async function PortfolioPage({ params: { lang } }: { params: { la
         </p>
       </section>
 
-      <PortfolioClient projects={projects} categories={categories} lang={lang} dictionary={dictionary} />
+      <PortfolioClient projects={projects} categories={categories} lang={params.lang} dictionary={dictionary} />
     </div>
   );
 }

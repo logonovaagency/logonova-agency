@@ -23,8 +23,8 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </svg>
   );
 
-export default async function ContactPage({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang);
+export default async function ContactPage({ params }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(params.lang);
   const { contactPage } = dictionary;
   return (
     <div className="bg-background">
@@ -66,7 +66,7 @@ export default async function ContactPage({ params: { lang } }: { params: { lang
           </div>
           <div>
             <div className="bg-slate-800/50 backdrop-blur border border-slate-700 p-8 rounded-lg">
-              <ContactForm dictionary={dictionary.contactPage.form} lang={lang} />
+              <ContactForm dictionary={dictionary.contactPage.form} lang={params.lang} />
             </div>
           </div>
         </div>
