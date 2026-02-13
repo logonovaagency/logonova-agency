@@ -6,8 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { i18n, type Locale } from '../../../i18n-config';
 import { getDictionary } from '@/lib/dictionaries';
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
-  const dictionary = await getDictionary(lang);
+export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(params.lang);
   const { seo } = dictionary;
   
   return {
@@ -29,7 +29,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
         },
       ],
       siteName: 'Logonova Agency',
-      locale: lang,
+      locale: params.lang,
       type: 'website',
     },
     twitter: {
