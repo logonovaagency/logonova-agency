@@ -20,22 +20,22 @@
     "items": [
       {
         "id": "web-dev",
-        "title": "Développement Web",
-        "description": "Solutions web de pointe adaptées aux besoins de votre entreprise.",
+        "title": "Développement Web & E-commerce",
+        "description": "Sites vitrines performants et boutiques en ligne optimisées pour la conversion.",
         "longDescription": "Nous construisons des sites et applications web réactifs et performants en utilisant les dernières technologies. Notre processus se concentre sur la scalabilité, la sécurité et une expérience utilisateur transparente. Des plateformes e-commerce aux logiciels d'entreprise sur mesure, nous livrons des produits numériques qui stimulent la croissance.",
         "price": "À partir de 5 000 $"
       },
       {
-        "id": "branding",
-        "title": "Image de marque & Design",
-        "description": "Créer des marques mémorables qui se démarquent de la concurrence.",
+        "id": "saas",
+        "title": "Applications Métiers (SaaS)",
+        "description": "Outils de gestion sur-mesure (ERP, CRM) pour digitaliser vos processus d'entreprise.",
         "longDescription": "Nos services de branding et de design vous aident à créer une identité unique qui résonne avec votre public cible. Nous couvrons tout, de la conception de logo et des chartes graphiques à la conception UI/UX pour les produits numériques. Nous croyons qu'un excellent design crée une connexion durable avec vos clients.",
         "price": "À partir de 3 500 $"
       },
       {
-        "id": "marketing",
-        "title": "Marketing Numérique",
-        "description": "Stratégies marketing basées sur les données pour développer votre audience.",
+        "id": "payment-integration",
+        "title": "Intégration de Paiements (Afrique)",
+        "description": "Connexion sécurisée avec Money Fusion, PayGate, KkiaPay et TMoney/Flooz.",
         "longDescription": "Nous vous aidons à atteindre et à engager votre public cible grâce à des stratégies de marketing numérique complètes. Nos services incluent le SEO, le marketing de contenu, la gestion des médias sociaux et les campagnes publicitaires payantes. Nous nous concentrons sur des résultats mesurables et un retour sur investissement positif.",
         "price": "À partir de 2 500 $/mois"
       }
@@ -116,6 +116,22 @@
       }
     ]
   },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "La confiance et la satisfaction de nos clients sont notre plus grande récompense.",
+    "items": [
+      {
+        "name": "Jean-Marc K.",
+        "role": "Gérant de Boutique",
+        "quote": "L'intégration des paiements locaux a tout changé pour nous. Merci Logonova."
+      },
+      {
+        "name": "Sarah A.",
+        "role": "Directrice Marketing",
+        "quote": "Une équipe réactive et un design qui nous démarque vraiment de la concurrence."
+      }
+    ]
+  },
   "portfolioPage": {
     "title": "Nos réalisations",
     "subtitle": "Nous sommes fiers de notre travail. Explorez une sélection de nos projets qui mettent en valeur notre engagement envers la qualité et l'innovation."
@@ -146,9 +162,10 @@
     }
   },
   "footer": {
-    "slogan": "Construire l'avenir du web, un projet à la fois. Nous sommes une agence numérique spécialisée dans les solutions web modernes.",
+    "slogan": "Agence Digitale à Lomé.",
     "siteMap": "Plan du site",
     "connect": "Réseaux",
-    "copyright": "© {year} Logonova Agency. Tous droits réservés. Fondé par APEDO Elias Josue Kossi."
+    "copyright": "© {year} Logonova Agency. Tous droits réservés.",
+    "founder": "Fondé par APEDO Elias Josue Kossi."
   }
 }

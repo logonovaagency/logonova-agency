@@ -1,18 +1,18 @@
-import { Code2, Palette, Megaphone } from 'lucide-react';
+import { Monitor, Server, CreditCard } from 'lucide-react';
 import type { Service, Project } from '@/lib/types';
 
 export const services: Omit<Service, 'icon'>[] & {icon: any}[] = [
   {
     id: 'web-dev',
-    icon: Code2,
+    icon: Monitor,
   },
   {
-    id: 'branding',
-    icon: Palette,
+    id: 'saas',
+    icon: Server,
   },
   {
-    id: 'marketing',
-    icon: Megaphone,
+    id: 'payment-integration',
+    icon: CreditCard,
   },
 ];
 
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     imageId: 'wings-shake-thumb',
     featured: true,
     galleryImageIds: ['wings-shake-gallery-1', 'wings-shake-gallery-2'],
-    category: "Web app App",
+    category: "Web App",
     techs: ["html css", "Firebase"]
   },
 ];

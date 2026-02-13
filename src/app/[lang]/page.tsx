@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
 import { PortfolioSection } from "@/components/PortfolioSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { ArrowRight } from "lucide-react";
 
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
@@ -59,17 +61,20 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
               const serviceText = services.items.find(s => s.id === service.id);
               if (!serviceText) return null;
               return (
-                <Card key={service.id} className="text-center flex flex-col">
-                  <CardHeader className="items-center">
-                    <div className="bg-primary/10 p-4 rounded-full mb-4">
-                      <service.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <CardTitle className="font-headline text-2xl">{serviceText.title}</CardTitle>
+                <Card key={service.id} className="bg-slate-900 border-slate-800 flex flex-col text-left p-2">
+                  <CardHeader>
+                      <div className="bg-primary/10 p-3 rounded-lg w-fit mb-4">
+                          <service.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <CardTitle className="font-headline text-xl">{serviceText.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow flex flex-col justify-between">
-                    <p className="text-muted-foreground mb-6">{serviceText.description}</p>
-                    <Button asChild variant="outline">
-                      <Link href={`/${lang}/services`}>{services.learnMore}</Link>
+                    <p className="text-muted-foreground text-sm">{serviceText.description}</p>
+                    <Button asChild variant="link" className="p-0 h-auto justify-start mt-4 text-primary">
+                        <Link href={`/${lang}/services`}>
+                            {services.learnMore}
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -80,6 +85,8 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
       </section>
 
       <PortfolioSection lang={lang} dictionary={dictionary} />
+
+      <TestimonialsSection dictionary={dictionary} />
     </div>
   );
 }

@@ -20,22 +20,22 @@
     "items": [
       {
         "id": "web-dev",
-        "title": "Web Development",
-        "description": "Cutting-edge web solutions tailored to your business needs.",
+        "title": "Web Development & E-commerce",
+        "description": "High-performance showcase sites and e-commerce stores optimized for conversion.",
         "longDescription": "We build responsive, high-performance websites and web applications using the latest technologies. Our process focuses on scalability, security, and providing a seamless user experience. From e-commerce platforms to custom enterprise software, we deliver digital products that drive growth.",
         "price": "Starts at $5,000"
       },
       {
-        "id": "branding",
-        "title": "Branding & Design",
-        "description": "Creating memorable brands that stand out from the crowd.",
+        "id": "saas",
+        "title": "Business Applications (SaaS)",
+        "description": "Custom management tools (ERP, CRM) to digitize your business processes.",
         "longDescription": "Our branding and design services help you craft a unique identity that resonates with your target audience. We cover everything from logo design and brand guidelines to UI/UX design for digital products. We believe great design is about creating a lasting connection with your customers.",
         "price": "Starts at $3,500"
       },
       {
-        "id": "marketing",
-        "title": "Digital Marketing",
-        "description": "Data-driven marketing strategies to grow your audience.",
+        "id": "payment-integration",
+        "title": "Payment Integration (Africa)",
+        "description": "Secure connection with Money Fusion, PayGate, KkiaPay and TMoney/Flooz.",
         "longDescription": "We help you reach and engage your target audience through comprehensive digital marketing strategies. Our services include SEO, content marketing, social media management, and paid advertising campaigns. We focus on measurable results and a positive return on investment.",
         "price": "Starts at $2,500/mo"
       }
@@ -92,6 +92,22 @@
       }
     ]
   },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "The trust and satisfaction of our clients are our greatest reward.",
+    "items": [
+      {
+        "name": "Jean-Marc K.",
+        "role": "Shop Manager",
+        "quote": "The integration of local payments changed everything for us. Thanks Logonova."
+      },
+      {
+        "name": "Sarah A.",
+        "role": "Marketing Director",
+        "quote": "A responsive team and a design that truly sets us apart from the competition."
+      }
+    ]
+  },
   "portfolioPage": {
     "title": "Our Work",
     "subtitle": "We take pride in our work. Explore a selection of our projects that showcase our commitment to quality and innovation."
@@ -122,9 +138,10 @@
     }
   },
   "footer": {
-    "slogan": "Building the future of the web, one project at a time. We are a digital agency specializing in modern web solutions.",
+    "slogan": "Digital Agency in Lomé.",
     "siteMap": "Site Map",
     "connect": "Connect",
-    "copyright": "© {year} Logonova Agency. All rights reserved. Founded by APEDO Elias Josue Kossi."
+    "copyright": "© {year} Logonova Agency. All rights reserved.",
+    "founder": "Founded by APEDO Elias Josue Kossi."
   }
 }
