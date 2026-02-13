@@ -32,6 +32,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
     { href: `/${lang}/services`, label: dictionary.nav.services },
     { href: `/${lang}/portfolio`, label: dictionary.nav.portfolio },
     { href: `/${lang}/about`, label: dictionary.nav.about },
+    { href: `/${lang}/pricing`, label: dictionary.nav.pricing },
     { href: `/${lang}/contact`, label: dictionary.nav.contact },
   ];
 

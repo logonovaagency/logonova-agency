@@ -27,6 +27,7 @@ export function Footer({ lang, dictionary }: { lang: Locale, dictionary: Diction
               <li><Link href={`/${lang}/services`} className="text-muted-foreground hover:text-primary transition-colors">{nav.services}</Link></li>
               <li><Link href={`/${lang}/portfolio`} className="text-muted-foreground hover:text-primary transition-colors">{nav.portfolio}</Link></li>
               <li><Link href={`/${lang}/about`} className="text-muted-foreground hover:text-primary transition-colors">{nav.about}</Link></li>
+              <li><Link href={`/${lang}/pricing`} className="text-muted-foreground hover:text-primary transition-colors">{nav.pricing}</Link></li>
               <li><Link href={`/${lang}/contact`} className="text-muted-foreground hover:text-primary transition-colors">{nav.contact}</Link></li>
             </ul>
           </div>

@@ -5,6 +5,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "about": "À Propos",
+    "pricing": "Tarifs",
     "contact": "Contact",
     "getQuote": "Obtenir un devis"
   },
@@ -177,6 +178,82 @@
       "button": "Planifier un appel"
     }
   },
+    "pricingPage": {
+    "title": "Tarifs & Investissement",
+    "subtitle": "Des solutions transparentes et adaptées à chaque étape de votre croissance. Investissez dans la technologie qui rapporte.",
+    "packsTitle": "Sites & Applications",
+    "ctaButton": "Demander un devis",
+    "packs": [
+      {
+        "title": "Starter (Vitrine)",
+        "price": "À partir de 1 200 $",
+        "subtitle": "(~750 000 FCFA)",
+        "description": "Pour les indépendants, portfolios et landing pages.",
+        "features": [
+          "Site One-Page",
+          "Design Responsive",
+          "Formulaire Contact"
+        ]
+      },
+      {
+        "title": "Business (Corporate)",
+        "price": "À partir de 3 500 $",
+        "subtitle": "(~2 200 000 FCFA)",
+        "description": "Pour les PME et entreprises établies.",
+        "features": [
+          "Site complet (5-7 pages)",
+          "CMS Admin",
+          "SEO Avancé",
+          "Multilingue"
+        ]
+      },
+      {
+        "title": "E-commerce (Boutique)",
+        "price": "À partir de 8 000 $",
+        "subtitle": "(~5 000 000 FCFA)",
+        "description": "Vente en ligne internationale sécurisée.",
+        "features": [
+          "Catalogue illimité",
+          "Paiements (KkiaPay/Stripe)",
+          "Dashboard Admin"
+        ]
+      },
+      {
+        "title": "Mobile Native (App)",
+        "price": "À partir de 12 000 $",
+        "subtitle": "(~7 500 000 FCFA)",
+        "description": "Application mobile iOS & Android performante.",
+        "features": [
+          "Dev Flutter",
+          "Notifications Push",
+          "Géolocalisation",
+          "Publication Stores"
+        ]
+      }
+    ],
+    "saasTitle": "Développement SaaS & Logiciels Sur-Mesure",
+    "saasBestSeller": "Best Seller",
+    "saasTiers": [
+      {
+        "title": "Micro-SaaS / MVP",
+        "budget": "5 000 $ - 15 000 $",
+        "description": "Une fonctionnalité principale, design basique, peu d'automatisations. Idéal pour tester un marché rapidement.",
+        "isRecommended": false
+      },
+      {
+        "title": "SaaS Standard",
+        "budget": "15 000 $ - 50 000 $",
+        "description": "Produit commercialisable complet. UX/UI soignée, Dashboard Admin, Paiements (Stripe/KkiaPay), Gestion utilisateurs et API.",
+        "isRecommended": true
+      },
+      {
+        "title": "SaaS Enterprise / Complexe",
+        "budget": "50 000 $ - 150 000 $ +",
+        "description": "Haute technologie. IA intégrée, traitement de Big Data, haute sécurité (bancaire/médical), applications mobiles natives incluses, architecture micro-services.",
+        "isRecommended": false
+      }
+    ]
+  },
   "footer": {
     "slogan": "Agence Digitale à Lomé.",
     "siteMap": "Plan du site",
@@ -194,5 +271,3 @@
     "button": "Retour à la base (Accueil)"
   }
 }
-
-    

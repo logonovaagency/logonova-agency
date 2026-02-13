@@ -5,6 +5,7 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "about": "About",
+    "pricing": "Pricing",
     "contact": "Contact",
     "getQuote": "Get a Quote"
   },
@@ -177,6 +178,82 @@
       "button": "Schedule a call"
     }
   },
+    "pricingPage": {
+    "title": "Pricing & Investment",
+    "subtitle": "Transparent solutions tailored for every stage of your growth. Invest in technology that delivers returns.",
+    "packsTitle": "Websites & Applications",
+    "ctaButton": "Request a Quote",
+    "packs": [
+      {
+        "title": "Starter (Showcase)",
+        "price": "Starts at $1,200",
+        "subtitle": "(~750,000 FCFA)",
+        "description": "For freelancers, portfolios, and landing pages.",
+        "features": [
+          "One-Page Site",
+          "Responsive Design",
+          "Contact Form"
+        ]
+      },
+      {
+        "title": "Business (Corporate)",
+        "price": "Starts at $3,500",
+        "subtitle": "(~2,200,000 FCFA)",
+        "description": "For SMEs and established companies.",
+        "features": [
+          "Full Site (5-7 pages)",
+          "Admin CMS",
+          "Advanced SEO",
+          "Multilingual"
+        ]
+      },
+      {
+        "title": "E-commerce (Store)",
+        "price": "Starts at $8,000",
+        "subtitle": "(~5,000,000 FCFA)",
+        "description": "Secure international online selling.",
+        "features": [
+          "Unlimited Catalog",
+          "Payments (KkiaPay/Stripe)",
+          "Admin Dashboard"
+        ]
+      },
+      {
+        "title": "Mobile Native (App)",
+        "price": "Starts at $12,000",
+        "subtitle": "(~7,500,000 FCFA)",
+        "description": "High-performance iOS & Android mobile application.",
+        "features": [
+          "Flutter Development",
+          "Push Notifications",
+          "Geolocation",
+          "Store Publication"
+        ]
+      }
+    ],
+    "saasTitle": "Custom SaaS & Software Development",
+    "saasBestSeller": "Best Seller",
+    "saasTiers": [
+      {
+        "title": "Micro-SaaS / MVP",
+        "budget": "$5,000 - $15,000",
+        "description": "A core feature, basic design, few automations. Ideal for testing a market quickly.",
+        "isRecommended": false
+      },
+      {
+        "title": "Standard SaaS",
+        "budget": "$15,000 - $50,000",
+        "description": "Complete marketable product. Polished UX/UI, Admin Dashboard, Payments (Stripe/KkiaPay), User Management, and API.",
+        "isRecommended": true
+      },
+      {
+        "title": "Enterprise / Complex SaaS",
+        "budget": "$50,000 - $150,000+",
+        "description": "High technology. Integrated AI, Big Data processing, high security (banking/medical), native mobile apps included, micro-services architecture.",
+        "isRecommended": false
+      }
+    ]
+  },
   "footer": {
     "slogan": "Digital Agency in Lomé.",
     "siteMap": "Site Map",
@@ -194,5 +271,3 @@
     "button": "Return to Base (Home)"
   }
 }
-
-    
