@@ -1,5 +1,5 @@
 import { projects as projectsData } from "@/lib/data";
-import { PortfolioClient } from "./PortfolioClient";
+import { PortfolioClient } from "@/app/portfolio/PortfolioClient";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
 

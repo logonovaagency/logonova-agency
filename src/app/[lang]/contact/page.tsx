@@ -1,4 +1,4 @@
-import { ContactForm } from "./ContactForm";
+import { ContactForm } from "@/app/contact/ContactForm";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 import type { Locale } from "../../../i18n-config";
