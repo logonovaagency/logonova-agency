@@ -1,12 +1,10 @@
 "use client";
 
-import { useFormStatus } from "react-dom";
-import { useEffect, useActionState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
-import { submitContactForm } from "./actions";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -25,8 +23,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { Loader2, Send } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Loader2, Send, CheckCircle } from "lucide-react";
 import type { Dictionary } from "@/lib/dictionaries";
 import { Locale } from "../../../i18n-config";
 
@@ -41,25 +39,18 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-const initialState = {
-  success: false,
-  message: "",
-  errors: null,
-};
-
-function SubmitButton({ dictionary }: { dictionary: Dictionary['contactPage']['form']}) {
-  const { pending } = useFormStatus();
+function SubmitButton({ dictionary, isSubmitting }: { dictionary: Dictionary['contactPage']['form'], isSubmitting: boolean }) {
   return (
-    <Button type="submit" disabled={pending} className="w-full">
-      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
+    <Button type="submit" disabled={isSubmitting} className="w-full">
+      {isSubmitting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
       {dictionary.submit}
     </Button>
   );
 }
 
 export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['contactPage']['form'], lang: Locale }) {
-  const [state, formAction] = useActionState(submitContactForm, initialState);
-  const { toast } = useToast();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
@@ -73,39 +64,60 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
     },
   });
 
-  useEffect(() => {
-    if (state.success) {
-      toast({
-        title: "Success!",
-        description: state.message,
-      });
-      form.reset();
-    } else if (state.message && !state.success && !state.errors) {
-      toast({
-        variant: "destructive",
-        title: "Uh oh! Something went wrong.",
-        description: state.message,
-      });
-    }
-  }, [state, form, toast]);
+  const { formState: { isSubmitting } } = form;
 
-  useEffect(() => {
-    if (state.errors) {
-        Object.entries(state.errors).forEach(([key, value]) => {
-            if (value) {
-            form.setError(key as keyof ContactFormValues, {
-                type: "server",
-                message: value[0],
-            });
-            }
+  async function onSubmit(values: ContactFormValues) {
+    setError(null);
+
+    const payload = {
+        ...values,
+        _subject: "Nouveau Lead - Site Logonova",
+        _template: "table",
+        _captcha: "false",
+    };
+
+    try {
+        const response = await fetch("https://formsubmit.co/ajax/devis.logonovaagency@gmail.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            body: JSON.stringify(payload),
         });
+
+        if (response.ok) {
+            setIsSuccess(true);
+        } else {
+            const result = await response.json();
+            const message = result.message || dictionary.error;
+            setError(message);
+        }
+    } catch (e) {
+        const message = (e instanceof Error ? e.message : String(e)) || dictionary.error;
+        setError(message);
     }
-  }, [state.errors, form]);
+  }
+
+  if (isSuccess) {
+    return (
+        <div className="flex flex-col items-center justify-center text-center p-8 bg-green-900/20 rounded-lg border border-green-700">
+            <CheckCircle className="w-16 h-16 text-green-400 mb-4" />
+            <h3 className="text-2xl font-headline font-bold mb-2 text-green-300">Message Envoyé !</h3>
+            <p className="text-muted-foreground">{dictionary.success}</p>
+        </div>
+    );
+  }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(() => {})} action={formAction} className="space-y-6">
-        <input type="hidden" name="lang" value={lang} />
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {error && (
+            <Alert variant="destructive">
+                <AlertTitle>Erreur</AlertTitle>
+                <AlertDescription>{error}</AlertDescription>
+            </Alert>
+        )}
         <FormField
           control={form.control}
           name="name"
@@ -126,7 +138,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
             <FormItem>
               <FormLabel>{dictionary.email}</FormLabel>
               <FormControl>
-                <Input placeholder={dictionary.emailPlaceholder} {...field} />
+                <Input type="email" placeholder={dictionary.emailPlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -139,7 +151,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
             <FormItem>
               <FormLabel>{dictionary.phone}</FormLabel>
               <FormControl>
-                <Input placeholder={dictionary.phonePlaceholder} {...field} />
+                <Input type="tel" placeholder={dictionary.phonePlaceholder} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -206,7 +218,7 @@ export function ContactForm({ dictionary, lang }: { dictionary: Dictionary['cont
             </FormItem>
           )}
         />
-        <SubmitButton dictionary={dictionary} />
+        <SubmitButton dictionary={dictionary} isSubmitting={isSubmitting} />
       </form>
     </Form>
   );

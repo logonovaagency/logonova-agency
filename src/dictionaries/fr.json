@@ -176,7 +176,8 @@
       "message": "Message",
       "messagePlaceholder": "Parlez-nous un peu de votre projet",
       "submit": "Envoyer le message",
-      "success": "Merci pour votre message ! Nous vous recontacterons sous peu."
+      "success": "Merci pour votre message ! Nous vous recontacterons sous peu.",
+      "error": "Une erreur inattendue est survenue. Veuillez réessayer."
     }
   },
   "footer": {
