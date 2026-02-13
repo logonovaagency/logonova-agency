@@ -83,8 +83,55 @@
     "technologies": "Technologies"
   },
   "servicesPage": {
-    "title": "Nos Services",
-    "subtitle": "Du concept au lancement, nous fournissons l'expertise nécessaire pour donner vie à votre vision numérique."
+    "title": "Une expertise technique au service de votre croissance",
+    "subtitle": "Du site vitrine à l'architecture SaaS complexe, nous maîtrisons chaque ligne de code.",
+    "ctaButton": "Voir les plans tarifaires",
+    "cards": [
+      {
+        "icon": "LayoutTemplate",
+        "title": "Développement Web Sur-Mesure",
+        "description": "Nous créons des sites vitrines, corporate et landing pages optimisés pour la performance, le référencement (SEO) et une expérience utilisateur irréprochable.",
+        "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
+      },
+      {
+        "icon": "ShoppingCart",
+        "title": "E-commerce & Paiements",
+        "description": "Solutions e-commerce complètes, de la simple boutique à la marketplace. Nous sommes experts en intégration de paiements locaux (KkiaPay) et internationaux.",
+        "stack": ["Stripe", "KkiaPay API", "Flutterwave", "Firebase", "Node.js"]
+      },
+      {
+        "icon": "Blocks",
+        "title": "Solutions SaaS & Logiciels",
+        "description": "Nous concevons et développons des applications métiers (ERP, CRM) et des logiciels SaaS complexes, basés sur des architectures microservices robustes et scalables.",
+        "stack": ["Node.js", "Python", "Firebase", "MySQL", "API REST"]
+      },
+      {
+        "icon": "Smartphone",
+        "title": "Applications Mobiles",
+        "description": "Développement d'applications natives iOS & Android avec Flutter pour des performances optimales, ou des PWA pour une accessibilité maximale sur tous les appareils.",
+        "stack": ["Flutter", "React Native", "PWA", "Firebase Auth", "Push Notifications"]
+      }
+    ],
+    "whyUs": {
+      "title": "L'avantage Logonova",
+      "items": [
+        {
+          "icon": "CircleHelp",
+          "title": "Support 7j/7",
+          "description": "Une question ? Un bug ? Notre équipe est disponible pour vous assister rapidement."
+        },
+        {
+          "icon": "Code",
+          "title": "Code 100% Propriétaire",
+          "description": "Vous possédez le code. Pas de dépendance à un constructeur de site, une liberté totale."
+        },
+        {
+          "icon": "Timer",
+          "title": "Délais Garantis",
+          "description": "Nous nous engageons sur un calendrier précis et nous le respectons. Votre projet, livré à temps."
+        }
+      ]
+    }
   },
   "contactPage": {
     "title": "Parlons de votre projet",

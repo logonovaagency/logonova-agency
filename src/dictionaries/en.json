@@ -83,8 +83,55 @@
     "technologies": "Technologies"
   },
   "servicesPage": {
-    "title": "Our Services",
-    "subtitle": "From concept to launch, we provide the expertise to bring your digital vision to life."
+    "title": "Technical expertise to fuel your growth",
+    "subtitle": "From showcase websites to complex SaaS architectures, we master every line of code.",
+    "ctaButton": "View pricing plans",
+    "cards": [
+      {
+        "icon": "LayoutTemplate",
+        "title": "Custom Web Development",
+        "description": "We create showcase, corporate, and landing pages optimized for performance, SEO, and a flawless user experience.",
+        "stack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
+      },
+      {
+        "icon": "ShoppingCart",
+        "title": "E-commerce & Payments",
+        "description": "Complete e-commerce solutions, from simple shops to marketplaces. We are experts in integrating local (KkiaPay) and international payment systems.",
+        "stack": ["Stripe", "KkiaPay API", "Flutterwave", "Firebase", "Node.js"]
+      },
+      {
+        "icon": "Blocks",
+        "title": "SaaS & Software Solutions",
+        "description": "We design and develop business applications (ERP, CRM) and complex SaaS software based on robust and scalable microservices architectures.",
+        "stack": ["Node.js", "Python", "Firebase", "MySQL", "REST API"]
+      },
+      {
+        "icon": "Smartphone",
+        "title": "Mobile Applications",
+        "description": "Development of native iOS & Android applications with Flutter for optimal performance, or PWAs for maximum accessibility on all devices.",
+        "stack": ["Flutter", "React Native", "PWA", "Firebase Auth", "Push Notifications"]
+      }
+    ],
+    "whyUs": {
+      "title": "The Logonova Advantage",
+      "items": [
+        {
+          "icon": "CircleHelp",
+          "title": "7-Day Support",
+          "description": "A question? A bug? Our team is available to assist you quickly."
+        },
+        {
+          "icon": "Code",
+          "title": "100% Proprietary Code",
+          "description": "You own the code. No dependency on a website builder, complete freedom."
+        },
+        {
+          "icon": "Timer",
+          "title": "Guaranteed Deadlines",
+          "description": "We commit to a specific schedule and we stick to it. Your project, delivered on time."
+        }
+      ]
+    }
   },
   "contactPage": {
     "title": "Let's Talk About Your Project",
