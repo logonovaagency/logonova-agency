@@ -58,9 +58,12 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
           <Rocket className="h-6 w-6 text-primary" />
           <span className="font-bold font-headline text-lg">Logonova</span>
         </Link>
-        <nav className="hidden flex-1 items-center space-x-4 md:flex">
+        
+        {/* Desktop Nav */}
+        <nav className="hidden flex-1 items-center space-x-1 md:flex">
           {renderNavLinks()}
         </nav>
+        
         <div className="flex flex-1 items-center justify-end space-x-2">
            <div className="flex items-center border rounded-md p-1">
             {i18n.locales.map((locale) => (
@@ -69,7 +72,7 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
                 asChild
                 variant={lang === locale ? "secondary" : "ghost"}
                 size="sm"
-                className="px-2"
+                className="px-2 text-xs h-7"
               >
                 <Link
                   href={redirectedPathName(locale)}
@@ -79,9 +82,12 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
               </Button>
             ))}
           </div>
-          <Button asChild>
+
+          <Button asChild className="hidden md:inline-flex">
             <Link href={`/${lang}/contact`}>{dictionary.nav.getQuote}</Link>
           </Button>
+
+          {/* Mobile Nav */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -90,17 +96,22 @@ export function Header({ lang, dictionary }: { lang: Locale, dictionary: Diction
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right">
+              <SheetContent side="right" className="flex flex-col">
                 <SheetHeader>
                   <SheetTitle>
-                     <Link href="/" className="flex items-center space-x-2">
+                     <Link href={`/${lang}`} className="flex items-center space-x-2">
                       <Rocket className="h-6 w-6 text-primary" />
                       <span className="font-bold font-headline text-lg">Logonova</span>
                     </Link>
                   </SheetTitle>
                 </SheetHeader>
-                <div className="mt-8 flex flex-col space-y-4">
+                <div className="mt-8 flex flex-col space-y-2">
                   {renderNavLinks(true)}
+                </div>
+                <div className="mt-auto pt-6">
+                  <Button asChild size="lg" className="w-full">
+                    <Link href={`/${lang}/contact`}>{dictionary.nav.getQuote}</Link>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

@@ -11,35 +11,38 @@ import type { Locale } from "../../../i18n-config";
 export default async function Home({ params: { lang } }: { params: { lang: Locale } }) {
   const dictionary = await getDictionary(lang);
   const { hero, services, featuredWork, projects: projectsDict } = dictionary;
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
   const featuredProjects = projectsData.filter(p => p.featured);
 
   return (
     <div className="flex flex-col">
-      <section className="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt="Abstract background"
-            fill
-            priority
-            className="object-cover"
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
+      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center text-center overflow-hidden bg-background">
+        {/* Animated Blobs */}
+        <div className="absolute inset-0 z-0 opacity-40 blur-3xl">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full animate-blob-1"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/30 rounded-full animate-blob-2"></div>
+        </div>
+
         <div className="relative z-10 container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
+          <h1 
+            className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight animate-fade-in-up bg-gradient-to-br from-blue-400 to-cyan-300 bg-clip-text text-transparent"
+            style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}
+          >
             {hero.title}
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/80 mb-8">
+          <p 
+            className="text-lg md:text-xl max-w-3xl mx-auto text-muted-foreground mb-8 animate-fade-in-up"
+            style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}
+          >
             {hero.subtitle}
           </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" asChild>
+          <div 
+            className="flex justify-center gap-4 animate-fade-in-up"
+            style={{ animationDelay: '600ms', animationFillMode: 'backwards' }}
+          >
+            <Button size="lg" asChild className="transition-all duration-300 hover:shadow-[0_0_25px] hover:shadow-primary/50 hover:scale-105">
               <Link href={`/${lang}/portfolio`}>{hero.buttonWork}</Link>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" asChild className="transition-all duration-300 hover:shadow-[0_0_25px] hover:shadow-secondary/50 hover:scale-105">
               <Link href={`/${lang}/services`}>{hero.buttonServices}</Link>
             </Button>
           </div>
