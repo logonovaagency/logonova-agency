@@ -120,41 +120,61 @@
       "error": "Une erreur inattendue est survenue. Veuillez réessayer."
     }
   },
-   "aboutPage": {
+  "aboutPage": {
     "hero": {
       "title": "Plus qu'une agence, votre partenaire technique.",
-      "subtitle": "Nous aidons les entreprises togolaises et internationales à dominer leur marché grâce à des outils numériques sur-mesure."
-    },
-    "mission": {
-      "title": "Digitaliser l'Afrique, une ligne de code à la fois.",
-      "text": "Notre mission est de fournir des solutions technologiques de classe mondiale qui sont non seulement innovantes, mais aussi parfaitement adaptées aux réalités du marché africain. Nous croyons au pouvoir des paiements mobiles, de l'accessibilité et de la performance pour créer des opportunités et stimuler la croissance locale."
+      "subtitle": "Nous aidons les entreprises togolaises et internationales à dominer leur marché grâce à des outils numériques sur-mesure et robustes."
     },
     "founder": {
       "name": "APEDO Elias Josue Kossi",
-      "role": "Fondateur & Développeur Principal",
-      "bio": "Passionné par le développement web et les solutions SaaS. Je construis des architectures robustes (React, Node.js) pour résoudre des problèmes réels et apporter une valeur tangible aux entreprises.",
-      "stack": "Ma stack :"
+      "role": "Fondateur & Lead Developer Full Stack",
+      "bio": "Passionné par le code et les architectures complexes. Mon objectif est de construire des solutions (SaaS, Mobile) qui résolvent de vrais problèmes business en Afrique et ailleurs. Je ne livre pas juste du code, je livre de la performance."
+    },
+    "stack": {
+      "title": "Les technologies que nous maîtrisons",
+      "categories": [
+        {
+          "title": "Frontend",
+          "icon": "frontend",
+          "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5/SCSS"]
+        },
+        {
+          "title": "Backend & Data",
+          "icon": "backend",
+          "items": ["Node.js", "Firebase", "PHP", "MySQL", "Python"]
+        },
+        {
+          "title": "Mobile",
+          "icon": "mobile",
+          "items": ["Flutter", "React Native", "PWA (Progressive Web App)"]
+        },
+        {
+          "title": "Paiement & API",
+          "icon": "payment",
+          "items": ["KkiaPay", "Money Fusion", "PayGate Global", "Stripe", "API REST"]
+        }
+      ]
     },
     "values": {
-      "title": "Ce qui nous définit",
+      "title": "Nos Valeurs",
       "items": [
         {
-          "title": "Innovation",
-          "description": "Nous sommes constamment à la pointe des technologies comme Next.js et les PWA pour vous offrir des solutions pérennes et performantes."
+          "title": "Innovation Pragmatique",
+          "description": "Nous choisissons la meilleure technologie pour le problème, pas juste pour le buzz. La performance et la maintenabilité priment."
         },
         {
-          "title": "Local & Global",
-          "description": "Une compréhension profonde du marché africain (paiements, connectivité) combinée à des standards de développement internationaux."
+          "title": "Ancrage Local & Global",
+          "description": "Une expertise unique sur les paiements africains, combinée à des standards de code et de sécurité internationaux."
         },
         {
-          "title": "Transparence",
-          "description": "Pas de coûts cachés ni de jargon technique. Vous bénéficiez d'un suivi clair et en temps réel de l'avancement de votre projet."
+          "title": "Transparence Totale",
+          "description": "Accès direct au code source, communication claire et aucune mauvaise surprise. Vous êtes partenaire, pas seulement client."
         }
       ]
     },
     "cta": {
-      "title": "Prêt à lancer votre projet ?",
-      "button": "Contactez-nous"
+      "title": "Vous avez un défi technique ? Parlons-en.",
+      "button": "Planifier un appel"
     }
   },
   "footer": {

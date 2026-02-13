@@ -123,38 +123,58 @@
   "aboutPage": {
     "hero": {
       "title": "More than an agency, your technical partner.",
-      "subtitle": "We help Togolese and international businesses dominate their market with custom-built digital tools."
-    },
-    "mission": {
-      "title": "Digitizing Africa, one line of code at a time.",
-      "text": "Our mission is to provide world-class technology solutions that are not only innovative but also perfectly adapted to the realities of the African market. We believe in the power of mobile payments, accessibility, and performance to create opportunities and drive local growth."
+      "subtitle": "We help Togolese and international businesses dominate their market with robust, custom-built digital tools."
     },
     "founder": {
       "name": "APEDO Elias Josue Kossi",
-      "role": "Founder & Lead Developer",
-      "bio": "Passionate about web development and SaaS solutions. I build robust architectures (React, Node.js) to solve real-world problems and bring tangible value to businesses.",
-      "stack": "My stack:"
+      "role": "Founder & Lead Full Stack Developer",
+      "bio": "Passionate about code and complex architectures. My goal is to build solutions (SaaS, Mobile) that solve real business problems in Africa and beyond. I don't just ship code, I ship performance."
+    },
+    "stack": {
+      "title": "The technologies we master",
+      "categories": [
+        {
+          "title": "Frontend",
+          "icon": "frontend",
+          "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML5/SCSS"]
+        },
+        {
+          "title": "Backend & Data",
+          "icon": "backend",
+          "items": ["Node.js", "Firebase", "PHP", "MySQL", "Python"]
+        },
+        {
+          "title": "Mobile",
+          "icon": "mobile",
+          "items": ["Flutter", "React Native", "PWA (Progressive Web App)"]
+        },
+        {
+          "title": "Payment & API",
+          "icon": "payment",
+          "items": ["KkiaPay", "Money Fusion", "PayGate Global", "Stripe", "REST API"]
+        }
+      ]
     },
     "values": {
-      "title": "What Defines Us",
+      "title": "Our Values",
       "items": [
         {
-          "title": "Innovation",
-          "description": "We are constantly at the forefront of technologies like Next.js and PWAs to offer you durable and high-performing solutions."
+          "title": "Pragmatic Innovation",
+          "description": "We choose the best technology for the problem, not just for the buzz. Performance and maintainability come first."
         },
         {
-          "title": "Local & Global",
-          "description": "A deep understanding of the African market (payments, connectivity) combined with international development standards."
+          "title": "Local & Global Anchor",
+          "description": "A unique expertise in African payment systems, combined with international code and security standards."
         },
         {
-          "title": "Transparency",
-          "description": "No hidden costs or technical jargon. You get clear, real-time tracking of your project's progress."
+          "title": "Total Transparency",
+          "description": "Direct access to the source code, clear communication, and no bad surprises. You are a partner, not just a customer."
         }
       ]
     },
     "cta": {
-      "title": "Ready to launch your project?",
-      "button": "Contact Us"
+      "title": "Got a technical challenge? Let's talk.",
+      "button": "Schedule a call"
     }
   },
   "footer": {
