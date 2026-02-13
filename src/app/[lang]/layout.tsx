@@ -6,8 +6,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { i18n, type Locale } from '../../../i18n-config';
 import { getDictionary } from '@/lib/dictionaries';
 
-const favicon = `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3cdefs%3e%3clinearGradient id='waveGradient' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3e%3cstop offset='0%25' style='stop-color:%2393c5fd' /%3e%3cstop offset='100%25' style='stop-color:%2367e8f9' /%3e%3c/linearGradient%3e%3c/defs%3e%3ccircle cx='50' cy='50' r='48' fill='%23263445'/%3e%3cpath d='M 50,2 A 48,48 0 0 1 50,98 A 48,48 0 0 1 50,2 M 50,12 A 38,38 0 0 1 50,88 A 38,38 0 0 1 50,12' fill='none' stroke='white' stroke-width='1.5' stroke-dasharray='2, 4'/%3e%3cpath d='M 35 25 L 35 60 C 35 70 45 75 50 75 C 60 75 70 70 70 60 L 70 50' fill='none' stroke='white' stroke-width='7' stroke-linecap='round'/%3e%3cpath d='M 30 55 C 45 45, 60 65, 75 55' fill='none' stroke='url(%23waveGradient)' stroke-width='7' stroke-linecap='round'/%3e%3c/svg%3e`;
-
 export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
   const dictionary = await getDictionary(lang);
   const { seo } = dictionary;
@@ -41,7 +39,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: L
       images: ['/og-image.jpg'],
     },
     icons: {
-      icon: favicon,
+      icon: "https://i.postimg.cc/hP0GdZZH/1770984365136.png",
     }
   };
 }
