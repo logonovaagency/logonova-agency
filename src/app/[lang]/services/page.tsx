@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionaries";
-import { i18n, type Locale } from "../../../i18n-config";
+import { i18n, type Locale } from "@/i18n-config";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";

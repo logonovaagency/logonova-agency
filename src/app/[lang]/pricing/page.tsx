@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
-import { i18n, type Locale } from "../../../i18n-config";
+import { i18n, type Locale } from "@/i18n-config";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
