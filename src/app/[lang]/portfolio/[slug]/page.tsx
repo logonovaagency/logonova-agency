@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/lib/data";
@@ -6,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
-import { i18n, type Locale } from "../../../../../i18n-config";
+import { i18n, type Locale } from "@/i18n-config";
 import type { Metadata } from 'next';
 
 type ProjectPageProps = {
@@ -53,21 +54,22 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const dictionary = await getDictionary(params.lang);
+  const { lang, slug } = params;
+  const dictionary = await getDictionary(lang);
   const { projectPage } = dictionary;
 
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
-  const currentIndex = projects.findIndex((p) => p.slug === params.slug);
+  const currentIndex = projects.findIndex((p) => p.slug === slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];
 
-  const description = project.description[params.lang] || project.description.fr;
-  const challenge = project.challenge[params.lang] || project.challenge.fr;
-  const solution = project.solution[params.lang] || project.solution.fr;
+  const description = project.description[lang] || project.description.fr;
+  const challenge = project.challenge[lang] || project.challenge.fr;
+  const solution = project.solution[lang] || project.solution.fr;
 
   return (
     <div className="bg-background">
@@ -75,7 +77,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="max-w-4xl mx-auto">
           
           <div className="mb-8">
-            <Link href={`/${params.lang}/portfolio`} className="inline-flex items-center text-primary hover:underline mb-6">
+            <Link href={`/${lang}/portfolio`} className="inline-flex items-center text-primary hover:underline mb-6">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 {projectPage.backToProjects}
             </Link>
@@ -137,11 +139,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
           
           <div className="mt-16 border-t pt-8 flex justify-between items-center">
-            <Link href={`/${params.lang}/portfolio`} className="text-primary hover:underline">
+            <Link href={`/${lang}/portfolio`} className="text-primary hover:underline">
                 {projectPage.backToProjects}
             </Link>
              <Button asChild variant="outline">
-                <Link href={`/${params.lang}/portfolio/${nextProject.slug}`}>
+                <Link href={`/${lang}/portfolio/${nextProject.slug}`}>
                     {projectPage.nextProject}
                     <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

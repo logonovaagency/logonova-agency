@@ -2,10 +2,24 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDictionary } from "@/lib/dictionaries";
-import type { Locale } from "../../../i18n-config";
+import { i18n, type Locale } from "@/i18n-config";
+import type { Metadata } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import { CodeXml, Database, Smartphone, Wallet, MoveRight, CheckCircle } from "lucide-react";
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(params.lang);
+  const { aboutPage } = dictionary;
+  return {
+    title: aboutPage.hero.title,
+    description: aboutPage.hero.subtitle,
+  };
+}
 
 const stackIcons = {
   frontend: CodeXml,
@@ -14,7 +28,8 @@ const stackIcons = {
   payment: Wallet,
 };
 
-export default async function AboutPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function AboutPage({ params }: { params: { lang: Locale } }) {
+  const { lang } = params;
   const dictionary = await getDictionary(lang);
   const { aboutPage } = dictionary;
 
