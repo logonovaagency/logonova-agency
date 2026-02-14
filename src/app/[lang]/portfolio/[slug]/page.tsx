@@ -50,6 +50,11 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
 
 export default async function ProjectPage({ params }: { params: { slug: string; lang: Locale; } }) {
   const { lang, slug } = params;
+
+  if (!lang || !slug) {
+      notFound();
+  }
+
   const dictionary = await getDictionary(lang);
   const { projectPage } = dictionary;
 
