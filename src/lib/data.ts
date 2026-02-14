@@ -116,5 +116,45 @@ export const projects: Project[] = [
       fr: "Structure sémantique optimisée pour le référencement (SEO) et la rapidité.",
       en: "Semantic structure optimized for SEO and speed."
     }
+  },
+  {
+    slug: "minano",
+    title: "Minano",
+    category: "Corporate",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    description: {
+      fr: "Site vitrine pour Minano.",
+      en: "Showcase site for Minano."
+    },
+    demoLink: "#",
+    year: "2024",
+    challenge: {
+      fr: "Créer une présence en ligne professionnelle.",
+      en: "Create a professional online presence."
+    },
+    solution: {
+      fr: "Un site rapide et moderne avec Next.js.",
+      en: "A fast and modern site with Next.js."
+    }
+  },
+  {
+    slug: "logonova-v1",
+    title: "Logonova V1",
+    category: "Portfolio",
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    description: {
+      fr: "Première version du site de l'agence Logonova.",
+      en: "First version of the Logonova agency website."
+    },
+    demoLink: "#",
+    year: "2023",
+    challenge: {
+      fr: "Mettre en avant les compétences de l'agence.",
+      en: "Showcase the agency's skills."
+    },
+    solution: {
+      fr: "Un design épuré avec des animations pour un effet moderne.",
+      en: "A clean design with animations for a modern effect."
+    }
   }
 ];

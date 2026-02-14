@@ -31,14 +31,15 @@ export async function generateMetadata({ params }: { params: { slug: string; lan
 
   if (!project) {
     return {
-      title: "Project Not Found | Logonova",
+      title: "Projet non trouvé | Logonova",
+      description: "Le projet que vous cherchez n'existe pas.",
     };
   }
 
   const description = project.description[lang] || project.description.fr;
 
   return {
-    title: project.title,
+    title: `${project.title} | Logonova`,
     description: description,
     openGraph: {
       title: `${project.title} | Logonova`,
