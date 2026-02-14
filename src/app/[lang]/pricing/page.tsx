@@ -7,8 +7,8 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export default async function PricingPage({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang);
+export default async function PricingPage({ params }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(params.lang);
   const { pricingPage } = dictionary;
 
   return (
@@ -48,7 +48,7 @@ export default async function PricingPage({ params: { lang } }: { params: { lang
               </CardContent>
               <CardFooter>
                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90">
-                    <Link href={`/${lang}/contact`}>{pricingPage.ctaButton}</Link>
+                    <Link href={`/${params.lang}/contact`}>{pricingPage.ctaButton}</Link>
                  </Button>
               </CardFooter>
             </Card>

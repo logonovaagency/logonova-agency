@@ -18,8 +18,8 @@ const iconMap: { [key: string]: LucideIcon } = {
   Timer
 };
 
-export default async function ServicesPage({ params: { lang } }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(lang);
+export default async function ServicesPage({ params }: { params: { lang: Locale } }) {
+  const dictionary = await getDictionary(params.lang);
   const { servicesPage } = dictionary;
 
   return (
@@ -52,7 +52,7 @@ export default async function ServicesPage({ params: { lang } }: { params: { lan
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col justify-between">
                   <div>
-                    <p className="font-semibold text-sm text-foreground mb-3">{lang === 'fr' ? 'Technologies principales :' : 'Main technologies:'}</p>
+                    <p className="font-semibold text-sm text-foreground mb-3">{params.lang === 'fr' ? 'Technologies principales :' : 'Main technologies:'}</p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.stack.map(tech => (
                         <Badge key={tech} variant="secondary">{tech}</Badge>
@@ -60,7 +60,7 @@ export default async function ServicesPage({ params: { lang } }: { params: { lan
                     </div>
                   </div>
                   <Button asChild variant="outline" className="w-full mt-auto">
-                    <Link href={`/${lang}/pricing`}>
+                    <Link href={`/${params.lang}/pricing`}>
                       {servicesPage.ctaButton}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
