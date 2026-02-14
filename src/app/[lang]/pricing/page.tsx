@@ -1,14 +1,28 @@
-
 import { CheckCircle } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
-import type { Locale } from "../../../i18n-config";
+import { i18n, type Locale } from "../../../i18n-config";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import type { Metadata } from "next";
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(params.lang);
+  const { pricingPage } = dictionary;
+  return {
+    title: pricingPage.title,
+    description: pricingPage.subtitle,
+  };
+}
 
 export default async function PricingPage({ params }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(params.lang);
+  const lang = params.lang;
+  const dictionary = await getDictionary(lang);
   const { pricingPage } = dictionary;
 
   return (
@@ -48,7 +62,7 @@ export default async function PricingPage({ params }: { params: { lang: Locale }
               </CardContent>
               <CardFooter>
                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:opacity-90">
-                    <Link href={`/${params.lang}/contact`}>{pricingPage.ctaButton}</Link>
+                    <Link href={`/${lang}/contact`}>{pricingPage.ctaButton}</Link>
                  </Button>
               </CardFooter>
             </Card>

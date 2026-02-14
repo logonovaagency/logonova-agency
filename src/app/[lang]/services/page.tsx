@@ -1,11 +1,25 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionaries";
-import type { Locale } from "../../../i18n-config";
+import { i18n, type Locale } from "../../../i18n-config";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { LayoutTemplate, ShoppingCart, Blocks, Smartphone, CircleHelp, Code, Timer, ArrowRight } from 'lucide-react';
 import type { LucideIcon } from "lucide-react";
+import type { Metadata } from "next";
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
+  const dictionary = await getDictionary(params.lang);
+  const { servicesPage } = dictionary;
+  return {
+    title: servicesPage.title,
+    description: servicesPage.subtitle,
+  };
+}
 
 // Mapping icon names from JSON to actual components
 const iconMap: { [key: string]: LucideIcon } = {
@@ -19,7 +33,8 @@ const iconMap: { [key: string]: LucideIcon } = {
 };
 
 export default async function ServicesPage({ params }: { params: { lang: Locale } }) {
-  const dictionary = await getDictionary(params.lang);
+  const lang = params.lang;
+  const dictionary = await getDictionary(lang);
   const { servicesPage } = dictionary;
 
   return (
@@ -52,7 +67,7 @@ export default async function ServicesPage({ params }: { params: { lang: Locale 
                 </CardHeader>
                 <CardContent className="flex-grow flex flex-col justify-between">
                   <div>
-                    <p className="font-semibold text-sm text-foreground mb-3">{params.lang === 'fr' ? 'Technologies principales :' : 'Main technologies:'}</p>
+                    <p className="font-semibold text-sm text-foreground mb-3">{lang === 'fr' ? 'Technologies principales :' : 'Main technologies:'}</p>
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.stack.map(tech => (
                         <Badge key={tech} variant="secondary">{tech}</Badge>
@@ -60,7 +75,7 @@ export default async function ServicesPage({ params }: { params: { lang: Locale 
                     </div>
                   </div>
                   <Button asChild variant="outline" className="w-full mt-auto">
-                    <Link href={`/${params.lang}/pricing`}>
+                    <Link href={`/${lang}/pricing`}>
                       {servicesPage.ctaButton}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
