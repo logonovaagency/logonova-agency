@@ -1,12 +1,14 @@
+
 import type { Metadata } from 'next';
 import '../globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
-import { i18n, type Locale } from '../../../i18n-config';
+import { i18n, type Locale } from '@/i18n-config';
 import { getDictionary } from '@/lib/dictionaries';
 
-export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
+export async function generateMetadata({ params: paramsPromise }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const params = await paramsPromise;
   const dictionary = await getDictionary(params.lang);
   const { seo } = dictionary;
   
@@ -50,11 +52,12 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-  params,
+  params: paramsPromise,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }>) {
+  const params = await paramsPromise;
   const dictionary = await getDictionary(params.lang);
 
   return (
